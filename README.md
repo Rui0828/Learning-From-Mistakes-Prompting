@@ -85,18 +85,19 @@ python src/main.py --input examples/sample_input.txt --output results/output.txt
 
 The following table presents the translation results for **Southern Amis** across different methods. We report the performance metrics **BLEU1**, **BLEU2**, **BLEU3**, and **chrF++** for each method. The results demonstrate the effectiveness of different prompting techniques, with **LFM Prompting** achieving the best performance.
 
-| **Methods**                                    | **BLEU1**$_{STD}$ | **BLEU2**$_{STD}$ | **BLEU3**$_{STD}$ | **chrF++**$_{STD}$ |
-|------------------------------------------------|-------------------|-------------------|-------------------|--------------------|
-| **Zeroshot**                                   | 1.0               | 0.0               | 0.0               | 3.9                |
-| **20-shots**                                   | 18.0              | 4.9               | 1.9               | 16.3               |
-| **Knn-Prompting (k=5)**                        | 30.1              | 14.4              | 6.9               | 28.1               |
-| **Knn-Prompting (k=10)**                       | 33.3              | 16.4              | 8.0               | 34.2               |
-| **Knn-Prompting w. RPC (k=5)**                 | 38.2$_{2.2}$      | 10.5$_{1.8}$      | 4.3$_{1.1}$       | 41.2$_{1.1}$       |
-| **Knn-Prompting w. RPC (k=10)**                | 37.8$_{2.2}$      | 12.5$_{3.2}$      | 5.2$_{1.9}$       | 41.5$_{1.6}$       |
-| **CoT Prompting**                              | 44.4$_{1.5}$      | 14.3$_{0.6}$      | 5.9$_{1.1}$       | 43.5$_{0.3}$       |
-| **LFM Prompting**                              | 44.4$_{2.7}$      | 17.5$_{1.8}$      | 8.2$_{1.7}$       | 44.9$_{1.9}$       |
+| **Methods**                                    | **BLEU1 (STD)** | **BLEU2 (STD)** | **BLEU3 (STD)** | **chrF++ (STD)** |
+|------------------------------------------------|-----------------|-----------------|-----------------|------------------|
+| **Zeroshot**                                   | 1.0             | 0.0             | 0.0             | 3.9              |
+| **20-shots**                                   | 18.0            | 4.9             | 1.9             | 16.3             |
+| **Knn-Prompting (k=5)**                        | 30.1            | 14.4            | 6.9             | 28.1             |
+| **Knn-Prompting (k=10)**                       | 33.3            | 16.4            | 8.0             | 34.2             |
+| **Knn-Prompting with RPC (k=5)**               | 38.2 ± 2.2      | 10.5 ± 1.8      | 4.3 ± 1.1       | 41.2 ± 1.1       |
+| **Knn-Prompting with RPC (k=10)**              | 37.8 ± 2.2      | 12.5 ± 3.2      | 5.2 ± 1.9       | 41.5 ± 1.6       |
+| **CoT Prompting**                              | 44.4 ± 1.5      | 14.3 ± 0.6      | 5.9 ± 1.1       | 43.5 ± 0.3       |
+| **LFM Prompting**                              | 44.4 ± 2.7      | 17.5 ± 1.8      | 8.2 ± 1.7       | 44.9 ± 1.9       |
 
 These results indicate that **LFM Prompting** provides a substantial improvement over traditional methods such as **Zeroshot** and **20-shots**, and also outperforms **Knn-Prompting** and **CoT Prompting** in terms of BLEU and chrF++ scores.
+
 
 ## Citation
 If you use this code in your research, please cite our paper:
