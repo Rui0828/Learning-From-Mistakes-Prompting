@@ -1,0 +1,12 @@
+torch==2.4.1
+openai==1.51.2
+nltk==3.8.1
+transformers==4.36.2
+faiss-cpu==1.8.0.post1
+sentence-transformers==2.2.2
+jieba==0.42.1
+zhon==2.0.2
+rouge_score==0.1.2
+Requests==2.32.3
+python-dotenv==1.0.1
+

@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  aboriginal:
+    build: "."
+    container_name: ch2amis
+    volumes:
+      - ./:/app
+    stdin_open: true
+    tty: true
