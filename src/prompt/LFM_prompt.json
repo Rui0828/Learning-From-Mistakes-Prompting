@@ -1,0 +1,5 @@
+{
+    "COTLFM" : "Confirm whether the following sentence needs revision: [zh]:{chinese} [your answer]:{llm_answer} \nJust answer me the [Revision]. Just answer me the [Revision]. Just answer me the [Revision].",
+    "system" : "Here are several sets of results you translated before: {hint} \nPlease analyze the differences between [your answer] and [Revision] result in contexts. Mainly focusing on the arrangement of words in sentences, learning their structure and grammar. Just change their order. Just change their order. Just change their order.\n",
+    "LFM" : "These are some tips of generating your case: {examples}\nConfirm whether the following sentence needs revision: [zh]:{chinese} [your answer]:{llm_answer} \nJust answer me the [Revision]. Just answer me the [Revision]. Just answer me the [Revision]."
+}

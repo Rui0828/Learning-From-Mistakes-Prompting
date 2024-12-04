@@ -8,21 +8,20 @@ from src.utils.dataset_utils import DatasetUtils
 
 
 class KNNRetriever:
-    def __init__(self, sentences_path, lexicon_path, sentence_embedding_path, lexicon_embedding_path, model_name):
+    def __init__(self, sentences_path, lexicon_path, lexicon_embedding_path, model_name):
         self.embedding_model = EmbeddingModel(model_name)
         self.sentences_path = sentences_path
         self.lexicon_path = lexicon_path
-        self.sentence_embedding_path = sentence_embedding_path
         self.lexicon_embedding_path = lexicon_embedding_path
         
         
         self.data_utils = DatasetUtils(model_name)
         self.all_ch2amis = self.data_utils._load_json(self.sentences_path, invert=True)
         self.lexicon, self.lexicon_list = self.data_utils._load_lexicon(self.lexicon_path)
-        self.sentence_embeddings = self.data_utils._load_embeddings(self.sentence_embedding_path, self.all_ch2amis.keys())
         self.faiss_index, self.lexicon_mapping = self.data_utils._load_lexicon_embeddings(self.lexicon_embedding_path, self.lexicon_list)
         
-    # find_similar
+        
+    # find_similar word
     def find_similar(self, term):
         embedding = self.embedding_model.get_single_embedding(term)
         _, indices = self.faiss_index.search(np.array([embedding]), k=1)
@@ -78,12 +77,12 @@ class KNNRetriever:
         return ans
 
     # find_knn_examples_topN_sentence
-    def find_knn_examples_topN_sentence(self, sentence, k):
+    def find_knn_examples_topN_sentence(self, sentence, k, sentence_embeddings):
         
         if k == 0:
             return []
         
-        cp_datastore_embeddings = self.sentence_embeddings.copy()
+        cp_datastore_embeddings = sentence_embeddings.copy()
         if sentence in cp_datastore_embeddings:
             del cp_datastore_embeddings[sentence]
 
@@ -110,10 +109,10 @@ class KNNRetriever:
 
     
     # knn主程式
-    def find_knn_examples(self, sentence, k, findlexicon=True):
+    def find_knn_examples(self, sentence, k, sentence_embeddings, findlexicon=True):
         examples = ''.join(
             f"[zh]: {zh_example}\n[amis]: {amis_example}\n\n"
-            for zh_example, amis_example in self.find_knn_examples_topN_sentence(sentence, k)
+            for zh_example, amis_example in self.find_knn_examples_topN_sentence(sentence, k, sentence_embeddings)
         )
 
         if findlexicon:
@@ -131,13 +130,16 @@ if __name__ == "__main__":
     # Load the configuration
     config = configparser.ConfigParser()
     config.read("config.ini", encoding="utf-8")
-    sentences_path = config['translation.datapath']['sentences']
-    lexicon_path = config['translation.datapath']['lexicon']
-    sentence_embedding_path = config['translation.datapath']['sentence_embedding']
-    lexicon_embedding_path = config['translation.datapath']['lexicon_embedding']
-    model_name = config['translation.ch2amis']['embedding_model']
+    sentences_path = config['datapath']['sentences']
+    lexicon_path = config['datapath']['lexicon']
+    sentence_embedding_path = config['datapath']['sentence_embedding']
+    lexicon_embedding_path = config['datapath']['lexicon_embedding']
+    model_name = config['ch2amis']['embedding_model']
     
-    knn = KNNRetriever(sentences_path, lexicon_path, sentence_embedding_path, lexicon_embedding_path, model_name)
+    data_utils = DatasetUtils(model_name)
+    all_ch2amis = data_utils._load_json(sentences_path, invert=True)
+    sentence_embeddings = data_utils._load_embeddings(sentence_embedding_path, all_ch2amis)
+    knn = KNNRetriever(sentences_path, lexicon_path, lexicon_embedding_path, model_name)
     
-    print(knn.find_knn_examples(sentence, 10))
+    print(knn.find_knn_examples(sentence, 10, sentence_embeddings))
     print("Test Done.")
