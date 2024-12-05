@@ -1,7 +1,6 @@
-import os
 import openai
-from dotenv import load_dotenv
 from typing import Union
+import src.utils.config_parser as config_parser
 
 class GPT():
     def __init__(self, api_key: str, model):
@@ -36,37 +35,13 @@ class GPT():
 # Test
 if __name__ == "__main__":
     # Test the GPT function
-    
-    # test_mes = [
-    #     "What is the capital of the United States?", 
-    #     "You are a Chinese-to-Amis language translator. Could you help me translate the following [zh] sentence: 中興大學是一所位於台灣的優質學校。"
-    # ]
-    
-    # for mes in test_mes:
-        
-    #     print("-" * 100)
-    #     print(f"Input message: {mes}")
-        
-    #     messages = [
-    #         {"role": "user", "content": mes}
-    #     ]
-        
-    #     response = gpt(messages)
-        
-    #     if response:
-    #         print(f"Response: {response}")
-    #     else:
-    #         print("[ERROR]: Failed to get a response from the GPT model.")
-        
-    
     message = [{'role': 'user', 'content': "What is the capital of the United States?"}]
     
+    args = config_parser.get_combined_config()
+    api_key = args["env"]["openai_api_key"]
+    gpt_model = GPT(api_key, args["gpt_model"])
     
-    load_dotenv()
-    api_key = os.getenv("OPENAI_API_KEY")
-    gpt_model = GPT(api_key)
-    
-    response = gpt_model.get_response(message, "gpt-4o")
+    response = gpt_model.get_response(message, args["gpt_model"], args["gpt_max_output_tokens"], args["gpt_temperature"])
         
     if response:
         print(f"Response: {response}")

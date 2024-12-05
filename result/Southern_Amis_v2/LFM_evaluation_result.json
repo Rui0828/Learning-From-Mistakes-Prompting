@@ -1,0 +1,98 @@
+[
+    {
+        "input_sentence": "很抱歉，我們這裡沒有米飯，只有麵食。",
+        "ground_truth": "Ma’enen aca , awaay ku hemay niyam , u walay a cacay . ",
+        "translation": "Ma’enen aca , awaay ini niyam tu hulu , cacay ku walay .",
+        "BLEU1": 0.7692307692307693,
+        "BLEU2": 0.4385290096535146,
+        "BLEU3": 0.33067336057941876,
+        "BLEU4": 0.24316915840399717
+    },
+    {
+        "input_sentence": "你的鉛筆在哪裡呢？",
+        "ground_truth": "Icuwa ku sapisurit nu misu ? ",
+        "translation": "Icuwa:tu ku sapisurit nu misu ?",
+        "BLEU1": 0.8333333333333334,
+        "BLEU2": 0.816496580927726,
+        "BLEU3": 0.7955364837549187,
+        "BLEU4": 0.7598356856515925
+    },
+    {
+        "input_sentence": "不管晴天或雨天，",
+        "ground_truth": "Ca’ay pisa’usi tu kacahedalan atu ka’uradan . ",
+        "translation": "Anu maratar a remi’ad atu ’urad a remi’ad ,",
+        "BLEU1": 0.11111111111111109,
+        "BLEU2": 4.972227154133551e-155,
+        "BLEU3": 4.308710317117189e-204,
+        "BLEU4": 1.0518351895246305e-231
+    },
+    {
+        "input_sentence": "你的家在哪裡？",
+        "ground_truth": "Icuwa ku luma’ nu misu ? ",
+        "translation": "Icuwa ku luma’ nu misu ?",
+        "BLEU1": 1.0,
+        "BLEU2": 1.0,
+        "BLEU3": 1.0,
+        "BLEU4": 1.0
+    },
+    {
+        "input_sentence": "青蛙叫了，月亮出現了。",
+        "ground_truth": "Masuni ku tatakula’ , masadak ku vulad . ",
+        "translation": "Masuni ku tatakula’ , masadaktu ku vulad .",
+        "BLEU1": 0.875,
+        "BLEU2": 0.7905694150420949,
+        "BLEU3": 0.6812405754951913,
+        "BLEU4": 0.5
+    },
+    {
+        "input_sentence": "這是我們阿美族的傳統建築。",
+        "ground_truth": "Inian satu unu lekakawatu niyam u Pangcah a nipatireng . ",
+        "translation": "U lekakawa nu Pangcah a tamdaw kina.",
+        "BLEU1": 0.18612544500887301,
+        "BLEU2": 0.1421556567517502,
+        "BLEU3": 7.114839189850813e-103,
+        "BLEU4": 4.539324034745998e-155
+    },
+    {
+        "input_sentence": "請問，你要不要辣的？",
+        "ground_truth": "Mangalay haw kisu tu aledahay ? ",
+        "translation": "Mipalita’a hen, aw kisu tu aledahay na’ay?",
+        "BLEU1": 0.42857142857142855,
+        "BLEU2": 0.3779644730092272,
+        "BLEU3": 0.30935528891357367,
+        "BLEU4": 5.021333847570327e-78
+    },
+    {
+        "input_sentence": "如果生病了，可以到醫院看病。",
+        "ground_truth": "Anu adada , madengay a tayra i paisingan a paising . ",
+        "translation": "Anu maduka dademaktu , kapahtu tayra paisingan a mimelaw ising .",
+        "BLEU1": 0.5454545454545454,
+        "BLEU2": 0.2335496832484569,
+        "BLEU3": 1.1422311215254848e-102,
+        "BLEU4": 7.208781414766327e-155
+    },
+    {
+        "input_sentence": "人們收到了信，都很高興。",
+        "ground_truth": "Makala tu nipacudad ku tamdaw , salipahak saan . ",
+        "translation": "Maala’tu ku nipacudad nu tamdaw , amin a lipahak .",
+        "BLEU1": 0.5,
+        "BLEU2": 0.2357022603955158,
+        "BLEU3": 1.149168560061151e-102,
+        "BLEU4": 7.241926111174567e-155
+    },
+    {
+        "input_sentence": "在日記裡我留下許多的回憶。",
+        "ground_truth": "I nipisurit tu demak i remiremi’ad , adihay ku nikarahtengan nu maku . ",
+        "translation": "Maka payu nu maku, suped han adihay a tamdaw.",
+        "BLEU1": 0.14248453076221212,
+        "BLEU2": 4.508646533836809e-155,
+        "BLEU3": 3.472701266598898e-204,
+        "BLEU4": 8.020204191025903e-232
+    },
+    {
+        "avg_BLEU1": 0.5391,
+        "avg_BLEU2": 0.4035,
+        "avg_BLEU3": 0.3117,
+        "avg_BLEU4": 0.2503
+    }
+]

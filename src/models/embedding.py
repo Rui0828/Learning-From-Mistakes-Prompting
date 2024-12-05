@@ -22,7 +22,7 @@ class EmbeddingModel:
     # 批量轉換
     def get_multiple_embeddings(self, sentences):
         embeddings = {}
-        for sentence in tqdm(sentences, desc="Loading sentences embeddings"):
+        for sentence in tqdm(sentences, desc="Loading datastore embeddings"):
             embeddings[sentence] = self.get_single_embedding(sentence)
         return embeddings
 

@@ -1,0 +1,908 @@
+[
+    {
+        "input_sentence": "另一半的原住民已經住在都市裡了。",
+        "ground_truth": "U ruma a latusa nu Yin-cu-min i tukaytu a maru’ . ",
+        "translation": "Terungtu ku cacay a Yin-cu-min a maru’ i tukay .",
+        "BLEU1": 0.5429024508215757,
+        "BLEU2": 0.23362801673857259,
+        "BLEU3": 1.1042924392270385e-102,
+        "BLEU4": 6.858354866987037e-155
+    },
+    {
+        "input_sentence": "爸爸高興得笑呵呵。",
+        "ground_truth": "Salipahak sa ci ama a matawa . ",
+        "translation": "Salipahak ku wama matawa .",
+        "BLEU1": 0.40219202762138356,
+        "BLEU2": 0.259613837492502,
+        "BLEU3": 1.069094228688596e-102,
+        "BLEU4": 6.222676699505816e-155
+    },
+    {
+        "input_sentence": "但是，不要幾天就會康復。",
+        "ground_truth": "nika , a ca’ay kapina a remi’ad a kapahtu . ",
+        "translation": "Nika, na’ay kapina a remi’ad anu kapahtu.",
+        "BLEU1": 0.2791881675133095,
+        "BLEU2": 0.24622082007735305,
+        "BLEU3": 0.20152611785210583,
+        "BLEU4": 3.271092989210003e-78
+    },
+    {
+        "input_sentence": "我們去山上探望阿公。",
+        "ground_truth": "Natala lutuk kami a milisu’ ci vakiyan . ",
+        "translation": "Talalutuk kami a milisu’ tu vaki.",
+        "BLEU1": 0.35826565528689464,
+        "BLEU2": 0.32044254369000136,
+        "BLEU3": 0.26662156551470545,
+        "BLEU4": 4.1382219658909647e-78
+    },
+    {
+        "input_sentence": "我也很好，謝謝。",
+        "ground_truth": "Kapah:tu kaku , aray . ",
+        "translation": "Kappah kaku aca, aray.",
+        "BLEU1": 0.19470019576785122,
+        "BLEU2": 5.808561601872144e-155,
+        "BLEU3": 4.3852454550402036e-204,
+        "BLEU4": 1.0032743411283238e-231
+    },
+    {
+        "input_sentence": "數數看，有沒有少？",
+        "ground_truth": "Sa’usienma anu simasidayay ? ",
+        "translation": "Suwal melawan, ira’ay haw simasidayay?",
+        "BLEU1": 0,
+        "BLEU2": 0,
+        "BLEU3": 0,
+        "BLEU4": 0
+    },
+    {
+        "input_sentence": "找到了！原來牠躺臥在大石頭的後面。",
+        "ground_truth": "Matepatu ! Araw madiku:tu i lalikul nu tataakay a vukeluh . ",
+        "translation": "Matepatu! Araw cira madiku:tu i lalikul nu tata’ak a vukeluh.",
+        "BLEU1": 0.5429024508215757,
+        "BLEU2": 0.40465559506275994,
+        "BLEU3": 0.33669033770463175,
+        "BLEU4": 0.2630501434025343
+    },
+    {
+        "input_sentence": "瞭望台在部落的入口，用来觀察敵人的動靜。",
+        "ground_truth": "I adawang nu niyaru’ ku papaengawan , u pimelawan tu rakat nu ada . ",
+        "translation": "Maka ku papaengawan i niyaru’ a sapacauv ku tala tu tamdaw .",
+        "BLEU1": 0.35270071870442254,
+        "BLEU2": 0.16474628226984195,
+        "BLEU3": 8.572588017461457e-103,
+        "BLEU4": 5.57043127283747e-155
+    },
+    {
+        "input_sentence": "往南走就到了。",
+        "ground_truth": "Tatimul han ku rakat a tangasatu . ",
+        "translation": "Tatimul a rakat tangasatu.",
+        "BLEU1": 0.354274914555761,
+        "BLEU2": 6.1021374516895845e-155,
+        "BLEU3": 3.8220527812817926e-204,
+        "BLEU4": 8.008529468782886e-232
+    },
+    {
+        "input_sentence": "是的，我們是原住民。",
+        "ground_truth": "Hay , u Yin-cu-min kami . ",
+        "translation": "Hay , u Yin-cu-min kami .",
+        "BLEU1": 1.0,
+        "BLEU2": 1.0,
+        "BLEU3": 1.0,
+        "BLEU4": 1.0
+    },
+    {
+        "input_sentence": "路上汽車很多。",
+        "ground_truth": "Adihay ku karireng i lalan . ",
+        "translation": "Adihay ku karireng i lalan.",
+        "BLEU1": 0.6549846024623855,
+        "BLEU2": 0.6341861143397762,
+        "BLEU3": 0.6050912889434976,
+        "BLEU4": 0.5475182535069453
+    },
+    {
+        "input_sentence": "海水是鹹的。",
+        "ground_truth": "ahecid ku nanum nu liyal . ",
+        "translation": "Hay ahecid ku nanum i liyal .",
+        "BLEU1": 0.7142857142857143,
+        "BLEU2": 0.5976143046671969,
+        "BLEU3": 0.4185793008243382,
+        "BLEU4": 6.313993041533344e-78
+    },
+    {
+        "input_sentence": "是的，結很多果實。",
+        "ground_truth": "Hay , adihay ku heci . ",
+        "translation": "Hay , adihay ku heci .",
+        "BLEU1": 1.0,
+        "BLEU2": 1.0,
+        "BLEU3": 1.0,
+        "BLEU4": 1.0
+    },
+    {
+        "input_sentence": "長老為我們祈福，並勉勵我們努力讀書，勤奮工作。",
+        "ground_truth": "Pakalemed ku matu’asay i tamiyan , mitulun a pakakilmel a micudad , a malaluk aca a dademak . ",
+        "translation": "Milunguc ku matu’asay i tita’an , atu semuwal i tita’an a misakilmel a micudad , malaluk a dademak .",
+        "BLEU1": 0.631578947368421,
+        "BLEU2": 0.4588314677411235,
+        "BLEU3": 0.337359526788967,
+        "BLEU4": 5.362049128462204e-78
+    },
+    {
+        "input_sentence": "要走多久呢？",
+        "ground_truth": "Hacuwa ku tenes a remakat ? ",
+        "translation": "Kapina a remi’ad ku rakat aw saw ?",
+        "BLEU1": 0.375,
+        "BLEU2": 9.134564559628536e-155,
+        "BLEU3": 6.43691305555604e-204,
+        "BLEU4": 1.4256605770826504e-231
+    },
+    {
+        "input_sentence": "在書裡。如果我們勤讀書，可以讓我們增加知識。",
+        "ground_truth": "I cudad . Anu malaluk kita a micudad , a matungal ku vana’ nu mita . ",
+        "translation": "Maka cudad. Anu malaluk kami a micudad, kapahtu hen matungal tu vana’ niyam.",
+        "BLEU1": 0.3053548683915197,
+        "BLEU2": 0.14213495602508847,
+        "BLEU3": 7.609057094245563e-103,
+        "BLEU4": 5.010854169466314e-155
+    },
+    {
+        "input_sentence": "收到你的信，我很高興。",
+        "ground_truth": "Maala’tu ku nipacudad nu misu , lipahak kaku . ",
+        "translation": "Maala’tu ku nipacudad nu misu, lipahak kaku.",
+        "BLEU1": 0.5367694950537757,
+        "BLEU2": 0.4490935799743743,
+        "BLEU3": 0.39539712677429373,
+        "BLEU4": 0.32668286409255015
+    },
+    {
+        "input_sentence": "因此，我要好好的保存它。",
+        "ground_truth": "Sisa , a sadimelen nu maku a milesimet . ",
+        "translation": "Kaw saan, aw kapahay ku suped han i cira.",
+        "BLEU1": 0,
+        "BLEU2": 0,
+        "BLEU3": 0,
+        "BLEU4": 0
+    },
+    {
+        "input_sentence": "颱風當天，外面的風雨非常大，你們不要離開屋子。",
+        "ground_truth": "Yu valiyusan a remi’ad , pihacen ku tata’ak nu urad atu vali i hekal , aka piliyas kamu tu luma . ",
+        "translation": "Anu yu valiyus, tatata’ang ku vali atu ’urad i hekal, na’ay kamu piliyas tu luma.",
+        "BLEU1": 0.31281602148329835,
+        "BLEU2": 6.830583637089686e-155,
+        "BLEU3": 4.637690579112299e-204,
+        "BLEU4": 1.0093510195393956e-231
+    },
+    {
+        "input_sentence": "我的腳踏車壞掉了。",
+        "ground_truth": "mapeci ku vatikar nu maku . ",
+        "translation": "Mapeci ku vatikar nu maku .",
+        "BLEU1": 0.8333333333333334,
+        "BLEU2": 0.816496580927726,
+        "BLEU3": 0.7955364837549187,
+        "BLEU4": 0.7598356856515925
+    },
+    {
+        "input_sentence": "每年的八月到九月之間，我們的部落舉行豐年舞祭。",
+        "ground_truth": "I laed nu sakawalu atu sakasiwa nu vulad i mihemihca a malalikid ku niyaru’ niyam . ",
+        "translation": "Mihemiheca’an a waluway tayra siwa’ay, u niyaru’ ku niyam a misakeru’ tu miheca.",
+        "BLEU1": 0.24428389471321574,
+        "BLEU2": 6.5691432392285655e-155,
+        "BLEU3": 4.787447363748569e-204,
+        "BLEU4": 1.0772479586757503e-231
+    },
+    {
+        "input_sentence": "長老為我們舉辦成年禮的體能考驗。",
+        "ground_truth": "Parengrengen nu matu’asay kami . ",
+        "translation": "Matu’asay ku masadak a minanam tu tireng i tamiyan .",
+        "BLEU1": 0.10000000000000002,
+        "BLEU2": 4.717068855239749e-155,
+        "BLEU3": 4.16147533319354e-204,
+        "BLEU4": 1.0244914152188952e-231
+    },
+    {
+        "input_sentence": "下課了，我走出教室。",
+        "ground_truth": "Pahanhantu namicudad , taputal kaku . ",
+        "translation": "Mucerem dademaktu, miliyas kaku i picudadan.",
+        "BLEU1": 0.16666666666666669,
+        "BLEU2": 6.08970970641905e-155,
+        "BLEU3": 4.9255803963031984e-204,
+        "BLEU4": 1.1640469867513693e-231
+    },
+    {
+        "input_sentence": "時鐘有兩支針。",
+        "ground_truth": "Tusa ku rinum nu tuki . ",
+        "translation": "Ira ku tuki kina tusa a rinum.",
+        "BLEU1": 0.2857142857142857,
+        "BLEU2": 7.973301625706314e-155,
+        "BLEU3": 5.884436356840234e-204,
+        "BLEU4": 1.331960397810445e-231
+    },
+    {
+        "input_sentence": "老闆，我要買鉛筆和簿子。",
+        "ground_truth": "Tawki , micakay kaku tu sapisurit atu sasuritan . ",
+        "translation": "Tawki, aw kaku a micakay tu sapisurit atu sasuritan.",
+        "BLEU1": 0.5555555555555556,
+        "BLEU2": 0.372677996249965,
+        "BLEU3": 0.27428238865744764,
+        "BLEU4": 4.583829695130767e-78
+    },
+    {
+        "input_sentence": "很抱歉，我們這裡沒有米飯，只有麵食。",
+        "ground_truth": "Ma’enen aca , awaay ku hemay niyam , u walay a cacay . ",
+        "translation": "Ma’enen aca , awaay hulu ini , cacay walay.",
+        "BLEU1": 0.4274535922866364,
+        "BLEU2": 0.3205901942149773,
+        "BLEU3": 0.26838483869128793,
+        "BLEU4": 0.2117924180472059
+    },
+    {
+        "input_sentence": "現在是夏季，學生放暑假。",
+        "ground_truth": "U kalaludan anini , u pahanhanan nu micudaday . ",
+        "translation": "Anini nika kalaludan, pahanhanan ku micudaday.",
+        "BLEU1": 0.10108844328543891,
+        "BLEU2": 3.693595645692774e-155,
+        "BLEU3": 2.9875155272373934e-204,
+        "BLEU4": 7.060301868108111e-232
+    },
+    {
+        "input_sentence": "是的，我會唱好聽的歌。",
+        "ground_truth": "Hay , mavana’ kaku a remadiw tu kapahay a tengilan a radiw . ",
+        "translation": "Hay, mavana’ kaku i kapah a radiw.",
+        "BLEU1": 0.18187407671869282,
+        "BLEU2": 0.11341841376953124,
+        "BLEU3": 5.298451917342163e-103,
+        "BLEU4": 3.272561325903966e-155
+    },
+    {
+        "input_sentence": "他們在運動場上。",
+        "ground_truth": "I kakavekacan ku heni . ",
+        "translation": "Maka heni i kakavekacan kudul.",
+        "BLEU1": 0.4,
+        "BLEU2": 9.434137710479516e-155,
+        "BLEU3": 6.575474863046933e-204,
+        "BLEU4": 1.4488496539373276e-231
+    },
+    {
+        "input_sentence": "老師說：「積少成多」。",
+        "ground_truth": "Suwalsa ku pasevana’ay , “ Anu supedsa , araw adi:hay aca . ” ",
+        "translation": "Suwalsa ku pasuvana’ay , “ Adihay ku masakaput . ”",
+        "BLEU1": 0.4444909324090307,
+        "BLEU2": 0.33130398008295237,
+        "BLEU3": 1.2991976201496662e-102,
+        "BLEU4": 7.389947788921207e-155
+    },
+    {
+        "input_sentence": "阿公請你們吃什麼？",
+        "ground_truth": "U ma’an ku sapaka’en ni vaki i tamuwanan ? ",
+        "translation": "U ma’an ku titi nu rapic nu kamu a keman ?",
+        "BLEU1": 0.36363636363636365,
+        "BLEU2": 0.26967994498529685,
+        "BLEU3": 0.20392012162530065,
+        "BLEU4": 3.661843723291765e-78
+    },
+    {
+        "input_sentence": "媽媽，你辛苦了。",
+        "ground_truth": "Ina , mangeru’tu kisu . ",
+        "translation": "Mangeru’tu kisu , ina .",
+        "BLEU1": 0.6,
+        "BLEU2": 1.155441177691175e-154,
+        "BLEU3": 7.516873425707151e-204,
+        "BLEU4": 1.6034157163765524e-231
+    },
+    {
+        "input_sentence": "老師為我的傷口擦藥及包紮。",
+        "ground_truth": "Pa’iyuwan , tavuen aca nu pasevana’ay ku duka nu maku . ",
+        "translation": "Pa’iyuwan ku pasuvana’ay tu duka nu maku atu tavuen.",
+        "BLEU1": 0.44485411273156,
+        "BLEU2": 0.29841721084143685,
+        "BLEU3": 0.21962816755938316,
+        "BLEU4": 3.670443885491954e-78
+    },
+    {
+        "input_sentence": "海裡有什麼？",
+        "ground_truth": "U ma’an ku ira’ay i liyal ? ",
+        "translation": "U ma’an ira i liyal ?",
+        "BLEU1": 0.7054014374088451,
+        "BLEU2": 0.5985529678206387,
+        "BLEU3": 0.4261847354500941,
+        "BLEU4": 6.147254555356275e-78
+    },
+    {
+        "input_sentence": "我們要去教會做禮拜。",
+        "ground_truth": "A tala kiyukay kami a milihay . ",
+        "translation": "Aw kami tala tu kiyukay a milihay.",
+        "BLEU1": 0.5714285714285714,
+        "BLEU2": 1.1275951295965648e-154,
+        "BLEU3": 7.396815202070643e-204,
+        "BLEU4": 1.583976781977924e-231
+    },
+    {
+        "input_sentence": "也可以到郵局存錢、領錢和寄信。",
+        "ground_truth": "Madengay aca a tala Yu-ci a misinga’ a miala tu pida atu patayra tu sapacudad . ",
+        "translation": "Aca kapahtu tayra Yu-ci a supedsa pida , tangasa pida atu patangasa nipacudad .",
+        "BLEU1": 0.30959924991077925,
+        "BLEU2": 0.2031993138718307,
+        "BLEU3": 9.92562894000074e-103,
+        "BLEU4": 6.260547282231493e-155
+    },
+    {
+        "input_sentence": "爸爸和媽媽去工作了。",
+        "ground_truth": "Dademaktu ci ama aci ina . ",
+        "translation": "Tala dademak ci ama aci ina.",
+        "BLEU1": 0.5,
+        "BLEU2": 0.447213595499958,
+        "BLEU3": 0.3721003696282278,
+        "BLEU4": 5.775353993361614e-78
+    },
+    {
+        "input_sentence": "我在畫我的媽媽。",
+        "ground_truth": "Mikulit kaku tu wina nu maku . ",
+        "translation": "Mikulit kaku tu wina nu maku .",
+        "BLEU1": 1.0,
+        "BLEU2": 1.0,
+        "BLEU3": 1.0,
+        "BLEU4": 1.0
+    },
+    {
+        "input_sentence": "我有兩個哥哥和一個妹妹。",
+        "ground_truth": "Tatusa ku kaka nu maku tu vava’inayan , cacay ku sava tu vavahiyan . ",
+        "translation": "Ira ku tatusa a kaka atu cacay a vavahiyan a sava nu maku.",
+        "BLEU1": 0.42736665168106897,
+        "BLEU2": 9.383587259036525e-155,
+        "BLEU3": 6.383056127095385e-204,
+        "BLEU4": 1.3904424883755924e-231
+    },
+    {
+        "input_sentence": "他到外地工作，我很想念他。",
+        "ground_truth": "Tayra i nu tawan a niyaru’ a dademak cira , ma’urun tu kaku i ciraan . ",
+        "translation": "Tangasa cira tu putal a dademak, ma’uruntu kaku i cira.",
+        "BLEU1": 0.2744058180470132,
+        "BLEU2": 0.12935614315872326,
+        "BLEU3": 6.306770775949767e-103,
+        "BLEU4": 3.974453317545764e-155
+    },
+    {
+        "input_sentence": "你會跳舞嗎？",
+        "ground_truth": "Mavana’ haw kisu a misakeru’ ? ",
+        "translation": "Mavana’ haw kisu a misakeru ?",
+        "BLEU1": 0.8333333333333334,
+        "BLEU2": 0.7071067811865476,
+        "BLEU3": 0.63287829698514,
+        "BLEU4": 0.537284965911771
+    },
+    {
+        "input_sentence": "我喜歡吃糯米糰，不喜歡吃白米飯。",
+        "ground_truth": "U turun ku ka’ulahan nu maku a keman , ca’ay ka’ulah tu hulu . ",
+        "translation": "Ma’ulah kaku tu turun, ca’ay ma’ulah kaku tu hulu.",
+        "BLEU1": 0.12750076016387393,
+        "BLEU2": 4.034514184096006e-155,
+        "BLEU3": 3.107509628903754e-204,
+        "BLEU4": 7.176794039009363e-232
+    },
+    {
+        "input_sentence": "這是部落最重要的日子，也是每個家族團聚的時刻。",
+        "ground_truth": "U tadamaanay a remi’ad nu niyaru’ kinian , u kalcapuwan nu kasalumaluma’ a remi’ad . ",
+        "translation": "Iniyan ku nika’urip nu niyaru’ a maleka , aca ku maleka a tuki nu masakaput a luma’ .",
+        "BLEU1": 0.3888888888888889,
+        "BLEU2": 0.15124753549550501,
+        "BLEU3": 8.574680460564049e-103,
+        "BLEU4": 5.801180374671126e-155
+    },
+    {
+        "input_sentence": "男性長輩訓勉新郎和新娘，並祝福他們。",
+        "ground_truth": "Mitulun ku vaki tu valuhay a maramuday tu sapakalemed i tuhenian . ",
+        "translation": "Takusen nu matu’asay a wama ci laloma’ atu ci vavahi , aca malemed heni .",
+        "BLEU1": 0.13333333333333333,
+        "BLEU2": 5.4468019467171996e-155,
+        "BLEU3": 4.575906140954227e-204,
+        "BLEU4": 1.1008876702055895e-231
+    },
+    {
+        "input_sentence": "我有一隻狗。",
+        "ground_truth": "Cacay ku wacu nu maku . ",
+        "translation": "Cacay ku wacu nu maku.",
+        "BLEU1": 0.6549846024623855,
+        "BLEU2": 0.6341861143397762,
+        "BLEU3": 0.6050912889434976,
+        "BLEU4": 0.5475182535069453
+    },
+    {
+        "input_sentence": "我今年十歲了。",
+        "ground_truth": "Muketeptu ku miheca’an nu maku . ",
+        "translation": "Anini a miheca ku kaku a muketep .",
+        "BLEU1": 0.25,
+        "BLEU2": 7.458340731200295e-155,
+        "BLEU3": 5.6307666226860216e-204,
+        "BLEU4": 1.2882297539194154e-231
+    },
+    {
+        "input_sentence": "早上六點鐘，媽媽叫我起床。",
+        "ground_truth": "Enemay ku tuki tu davak , palalan nu wina kaku . ",
+        "translation": "Enemay ku tuki tu davak , masuni kaku nu ina a lemuwad .",
+        "BLEU1": 0.6923076923076923,
+        "BLEU2": 0.5370861555295747,
+        "BLEU3": 0.475170229325488,
+        "BLEU4": 0.4211813371894875
+    },
+    {
+        "input_sentence": "但是如果有親人去世，就不能吹奏，否則會觸犯禁忌。",
+        "ground_truth": "Nika , anu simapatayay nu lalavu nu luma’ , ca’ay kangaay a miviyuk , mi’apa anu ca’ay pilimu’ut . ",
+        "translation": "Nika anu ira’ay tamedaw a tayra , anu aka masuni , mavana’ milisapen tu aka .",
+        "BLEU1": 0.36270023920392513,
+        "BLEU2": 0.1415836759590244,
+        "BLEU3": 7.702045687107336e-103,
+        "BLEU4": 5.110503616121594e-155
+    },
+    {
+        "input_sentence": "船上總是裝滿了魚和蝦。",
+        "ground_truth": "ca’ay kanca katumes nu vuting atu urang ku lunan . ",
+        "translation": "Matumes nika ku lunan i kudul tu vuting atu urang.",
+        "BLEU1": 0.4,
+        "BLEU2": 0.2981423969999719,
+        "BLEU3": 1.3419716153110887e-102,
+        "BLEU4": 8.14486865257726e-155
+    },
+    {
+        "input_sentence": "很好學，也很有趣。",
+        "ground_truth": "Hay , kapah saka’ulahan aca . ",
+        "translation": "Kapah aca saka’ulahan.",
+        "BLEU1": 0.12262648039048077,
+        "BLEU2": 3.168232950523297e-155,
+        "BLEU3": 2.2777330777896214e-204,
+        "BLEU4": 5.092529201164552e-232
+    },
+    {
+        "input_sentence": "請坐，請問你要吃什麼？",
+        "ground_truth": "Kamaru’ hen , aw ma’an ku ka’enen nu misu ? ",
+        "translation": "Kamaru’ , u ma’an ku kangalayan nu misu a keman ?",
+        "BLEU1": 0.6363636363636364,
+        "BLEU2": 0.35675303400633784,
+        "BLEU3": 1.5107281721581068e-102,
+        "BLEU4": 8.909555824566607e-155
+    },
+    {
+        "input_sentence": "花兒好像在點點頭。",
+        "ground_truth": "Matiya u mita’ungay ku varu . ",
+        "translation": "Matiya u mita’ungay ku varu .",
+        "BLEU1": 1.0,
+        "BLEU2": 1.0,
+        "BLEU3": 1.0,
+        "BLEU4": 1.0
+    },
+    {
+        "input_sentence": "我們阿美族分佈在台灣的東部。",
+        "ground_truth": "I sawalian nu Taywan ku aru’ nu Pangcah . ",
+        "translation": "Aru’ ku Pangcah niyam i sawalian nu Taywan .",
+        "BLEU1": 0.6666666666666666,
+        "BLEU2": 0.408248290463863,
+        "BLEU3": 0.29129144784395883,
+        "BLEU4": 4.797597231912944e-78
+    },
+    {
+        "input_sentence": "什麼是竹笛？",
+        "ground_truth": "U ma’an ku viyuk ? ",
+        "translation": "U ma’an nika ku tamdaw ?",
+        "BLEU1": 0.6666666666666666,
+        "BLEU2": 0.36514837167011077,
+        "BLEU3": 1.5340992070208009e-102,
+        "BLEU4": 9.013778876140909e-155
+    },
+    {
+        "input_sentence": "但是，有很多颱風。",
+        "ground_truth": "Nika , adihay ku valiyus . ",
+        "translation": "Nika, adihay ku valiyusan.",
+        "BLEU1": 0.3032653298563167,
+        "BLEU2": 0.24761510494160163,
+        "BLEU3": 1.0015819949360275e-102,
+        "BLEU4": 5.780789590099596e-155
+    },
+    {
+        "input_sentence": "小朋友，你要買什麼？",
+        "ground_truth": "Wawaaw , u ma’an ku cakayen nu misu ? ",
+        "translation": "Ma’an ku nicakay nu wawaaw ?",
+        "BLEU1": 0.3032653298563167,
+        "BLEU2": 6.397495320955232e-155,
+        "BLEU3": 4.2929930481953196e-204,
+        "BLEU4": 9.291879812217675e-232
+    },
+    {
+        "input_sentence": "郵差穿著綠色的衣服。",
+        "ground_truth": "Sivuduy tu langdaway ku yu-cay . ",
+        "translation": "Sivuduy ci pulul nu langedaway a vuduy.",
+        "BLEU1": 0.14285714285714285,
+        "BLEU2": 5.637975647982813e-155,
+        "BLEU3": 4.6812838082003045e-204,
+        "BLEU4": 1.1200407237786664e-231
+    },
+    {
+        "input_sentence": "這是我們阿美族的生活傳統習慣。",
+        "ground_truth": "U lekakawa nu rayray atu ’urip nu mita u Pangcah . ",
+        "translation": "Iniyan satu unu ’urip niyam u Pangcah a sivuduy .",
+        "BLEU1": 0.36193496721438384,
+        "BLEU2": 0.19075647687597008,
+        "BLEU3": 9.659930085768159e-103,
+        "BLEU4": 6.197223199276648e-155
+    },
+    {
+        "input_sentence": "今天老師教我們製作竹笛。",
+        "ground_truth": "Anini a remi’ad pasevana’ i tamiyan ku pasevana’ay a misanga’ tu viyuk . ",
+        "translation": "U herek anini, pasevana’aw ku pasuvana’ay i tamiyanan tu misanga’ ku tamdaw.",
+        "BLEU1": 0.30668147154310776,
+        "BLEU2": 7.92356055856654e-155,
+        "BLEU3": 5.696473794685858e-204,
+        "BLEU4": 1.2736110049935266e-231
+    },
+    {
+        "input_sentence": "他們誰跑得快？",
+        "ground_truth": "Cima ku sivekacay nu heni ? ",
+        "translation": "Cima ku heni a sivekacay ?",
+        "BLEU1": 0.8333333333333334,
+        "BLEU2": 0.408248290463863,
+        "BLEU3": 1.6513295394012967e-102,
+        "BLEU4": 9.53091075863908e-155
+    },
+    {
+        "input_sentence": "這些是學校預備的午餐嗎？",
+        "ground_truth": "U sapakalahuk haw nu cacudadan kiniyan ? ",
+        "translation": "Kiniyan haw u sapakalahuk nu cacudadan ?",
+        "BLEU1": 0.7142857142857143,
+        "BLEU2": 0.3450327796711771,
+        "BLEU3": 1.4777858300981341e-102,
+        "BLEU4": 8.761982757198608e-155
+    },
+    {
+        "input_sentence": "我想要吃芋頭。",
+        "ground_truth": "Mangalay kaku a keman tu tali . ",
+        "translation": "Mangalay kaku a keman ku tali.",
+        "BLEU1": 0.5643211499270759,
+        "BLEU2": 0.5353620496724769,
+        "BLEU3": 0.4976883615946352,
+        "BLEU4": 0.43012508513132625
+    },
+    {
+        "input_sentence": "人們收到了信，都很高興。",
+        "ground_truth": "Makala tu nipacudad ku tamdaw , salipahak saan . ",
+        "translation": "Maala’tu ku nipacudad nu tamedaw, lipahak amin.",
+        "BLEU1": 0.21470779802151024,
+        "BLEU2": 5.991755122558557e-155,
+        "BLEU3": 4.422020304712096e-204,
+        "BLEU4": 1.0009379942300742e-231
+    },
+    {
+        "input_sentence": "你的鉛筆在哪裡呢？",
+        "ground_truth": "Icuwa ku sapisurit nu misu ? ",
+        "translation": "Icuwa ku sapisurit nu misu ?",
+        "BLEU1": 1.0,
+        "BLEU2": 1.0,
+        "BLEU3": 1.0,
+        "BLEU4": 1.0
+    },
+    {
+        "input_sentence": "魚用什麼呼吸？",
+        "ground_truth": "U ma’an ku sapahanhan nu vuting ? ",
+        "translation": "Ma’an ku sapahanhan ku vuting ?",
+        "BLEU1": 0.5643211499270759,
+        "BLEU2": 0.4371212831160368,
+        "BLEU3": 1.632341155220156e-102,
+        "BLEU4": 9.073649206312902e-155
+    },
+    {
+        "input_sentence": "這句話的意思是：",
+        "ground_truth": "U sananay kina suwal , ",
+        "translation": "U nika ku suwal a ma’an :",
+        "BLEU1": 0.2857142857142857,
+        "BLEU2": 7.973301625706314e-155,
+        "BLEU3": 5.884436356840234e-204,
+        "BLEU4": 1.331960397810445e-231
+    },
+    {
+        "input_sentence": "牠躲在潮濕的地方和石頭堆裡。",
+        "ground_truth": "I su’emetay atu atu atulan a milimek cira . ",
+        "translation": "Milimek cira maka su’emetay a niyaru’ atu atulan.",
+        "BLEU1": 0.4412484512922977,
+        "BLEU2": 9.308300767049977e-155,
+        "BLEU3": 6.246268028139813e-204,
+        "BLEU4": 1.3519605352440902e-231
+    },
+    {
+        "input_sentence": "你好嗎，老師？",
+        "ground_truth": "Kapah haw kisu , pasevana’ay ? ",
+        "translation": "Kisu haw, pasuvana’ay?",
+        "BLEU1": 0,
+        "BLEU2": 0,
+        "BLEU3": 0,
+        "BLEU4": 0
+    },
+    {
+        "input_sentence": "你們有飯嗎？",
+        "ground_truth": "Ira haw ku hemay nu namu ? ",
+        "translation": "Ira haw ku hemay nu kamu ?",
+        "BLEU1": 0.8571428571428571,
+        "BLEU2": 0.7559289460184544,
+        "BLEU3": 0.7024046153449173,
+        "BLEU4": 0.6434588841607617
+    },
+    {
+        "input_sentence": "但是，到了冬天溪水很淺。",
+        "ground_truth": "Nika , adidi ku nanum nu tarawadaw i kasinawan . ",
+        "translation": "Nika, tangasatu ku kasinawan, adidi ku nanum i sa’uwac.",
+        "BLEU1": 0.39770636302860873,
+        "BLEU2": 0.2982797722714566,
+        "BLEU3": 0.22801461052739297,
+        "BLEU4": 3.8792344511402313e-78
+    },
+    {
+        "input_sentence": "你在哪裡學阿美族語？",
+        "ground_truth": "Icuwa kisu a minanam tu suwal nu Pangcah ? ",
+        "translation": "Icuwa kisu a minanam tu suwal nu Pangcah ?",
+        "BLEU1": 1.0,
+        "BLEU2": 1.0,
+        "BLEU3": 1.0,
+        "BLEU4": 1.0
+    },
+    {
+        "input_sentence": "颱風來了，你們今天要上學嗎？",
+        "ground_truth": "Initu ku valiyus , a tala cacudadan haw kamu anini ? ",
+        "translation": "Initu ku valiyus, aw haw kamu talacacudadantu anini ?",
+        "BLEU1": 0.5338249352778719,
+        "BLEU2": 0.400368701458404,
+        "BLEU3": 1.5115898962885387e-102,
+        "BLEU4": 8.445927186766123e-155
+    },
+    {
+        "input_sentence": "她是做什麼工作的？",
+        "ground_truth": "U mimaanay ku demak nu nira ? ",
+        "translation": "Mima’anay ku dademak nira ?",
+        "BLEU1": 0.40219202762138356,
+        "BLEU2": 0.259613837492502,
+        "BLEU3": 1.069094228688596e-102,
+        "BLEU4": 6.222676699505816e-155
+    },
+    {
+        "input_sentence": "他們的簍子，一下子就裝滿了。",
+        "ground_truth": "Cuvay sa a matumes ku pulul nu heni . ",
+        "translation": "Matumes cuvay sa ku pulul nu heni.",
+        "BLEU1": 0.4294155960430205,
+        "BLEU2": 0.3279715789102868,
+        "BLEU3": 0.2556249207788509,
+        "BLEU4": 4.054801917798201e-78
+    },
+    {
+        "input_sentence": "是的，我跳得很好。",
+        "ground_truth": "Hay , kapah ku keru nu maku . ",
+        "translation": "Hay , mihulul kapah kaku .",
+        "BLEU1": 0.47768754038252614,
+        "BLEU2": 0.2616402413066696,
+        "BLEU3": 1.0992301153568253e-102,
+        "BLEU4": 6.458654791343583e-155
+    },
+    {
+        "input_sentence": "下午三點，她到阿嬤家學織布。",
+        "ground_truth": "Namalahuk tuluway ku tuki namalahuk , tayra cira i vayi a minanam a mitenun . ",
+        "translation": "Namalahuk tulu a tuki, tayra cira i luma’ nu vayi a minanam mitenun.",
+        "BLEU1": 0.5276331810218101,
+        "BLEU2": 0.3883275066603749,
+        "BLEU3": 0.2896237365068367,
+        "BLEU4": 4.601900716778204e-78
+    },
+    {
+        "input_sentence": "雖然我現在走路是一拐一拐的樣子，",
+        "ground_truth": "Kiyanca misapikupikuh hen ku rakat nu maku anini , ",
+        "translation": "Kiyanca anini ku remakat kaku nika misapikupikuh .",
+        "BLEU1": 0.4412484512922977,
+        "BLEU2": 9.308300767049977e-155,
+        "BLEU3": 6.246268028139813e-204,
+        "BLEU4": 1.3519605352440902e-231
+    },
+    {
+        "input_sentence": "在日記裡我留下許多的回憶。",
+        "ground_truth": "I nipisurit tu demak i remiremi’ad , adihay ku nikarahtengan nu maku . ",
+        "translation": "Maka payu nu maku ku adihay a suped han .",
+        "BLEU1": 0.37040911034085894,
+        "BLEU2": 0.17461252915686495,
+        "BLEU3": 8.513250079278737e-103,
+        "BLEU4": 5.364950815988815e-155
+    },
+    {
+        "input_sentence": "我早上六點鐘起床。",
+        "ground_truth": "enemay ku tuki nu maku a lemuwad . ",
+        "translation": "Enemay ku tuki nu davak a lemuwad kaku.",
+        "BLEU1": 0.625,
+        "BLEU2": 0.5175491695067657,
+        "BLEU3": 0.35844139094416977,
+        "BLEU4": 5.614021910443866e-78
+    },
+    {
+        "input_sentence": "好讓我們和同學一起聽。",
+        "ground_truth": "kay han makumud kami atu kaput a mitengil . ",
+        "translation": "Kay han kami atu kaput a makumud a mitengil.",
+        "BLEU1": 0.6666666666666666,
+        "BLEU2": 0.5,
+        "BLEU3": 0.41857930082433814,
+        "BLEU4": 0.3303164318013807
+    },
+    {
+        "input_sentence": "這麼說，你講得很流利喔！",
+        "ground_truth": "Anu saan , kapah kuni sanu Pangcah nu misu ! ",
+        "translation": "Anu saan, mavana’ a sanu kisu kapah u !",
+        "BLEU1": 0.39770636302860873,
+        "BLEU2": 8.898688699301465e-155,
+        "BLEU3": 6.092171930823323e-204,
+        "BLEU4": 1.331091014027761e-231
+    },
+    {
+        "input_sentence": "我不浪費碗裡的食物，",
+        "ground_truth": "Ca’ay palasawad kaku tu i kaysingay a kaka’enen , ",
+        "translation": "Ca’ay kaku palasawad tu kaka’enen kaysingay .",
+        "BLEU1": 0.6441233940645307,
+        "BLEU2": 1.037802429878279e-154,
+        "BLEU3": 6.354344355378841e-204,
+        "BLEU4": 1.3173084827829354e-231
+    },
+    {
+        "input_sentence": "當然是Rengus。",
+        "ground_truth": "Ci Rengus tu’i . ",
+        "translation": "Hay nika ci Rengus.",
+        "BLEU1": 0,
+        "BLEU2": 0,
+        "BLEU3": 0,
+        "BLEU4": 0
+    },
+    {
+        "input_sentence": "他都不害怕。",
+        "ground_truth": "ca’ay katalaw ku heni . ",
+        "translation": "Ca’ay katalaw ku cira amin.",
+        "BLEU1": 0.4,
+        "BLEU2": 0.316227766016838,
+        "BLEU3": 1.3951588629738666e-102,
+        "BLEU4": 8.38826642100846e-155
+    },
+    {
+        "input_sentence": "天黑了，青蛙叫了。",
+        "ground_truth": "Tu’eman sahen , masuni ku tatakula’ . ",
+        "translation": "Tu’eman ku remi’ad , masuni ku tatakula’ .",
+        "BLEU1": 0.75,
+        "BLEU2": 0.6546536707079771,
+        "BLEU3": 0.6014891009517342,
+        "BLEU4": 0.5410822690539396
+    },
+    {
+        "input_sentence": "你讀過這本書嗎？",
+        "ground_truth": "Nami’asiptu haw kisu tina cudad ? ",
+        "translation": "Nami’asiptu haw kisu i tina cudad ?",
+        "BLEU1": 0.8571428571428571,
+        "BLEU2": 0.7559289460184544,
+        "BLEU3": 0.6144368316876522,
+        "BLEU4": 8.44484326442819e-78
+    },
+    {
+        "input_sentence": "現在，牠穿著美麗的衣服，",
+        "ground_truth": "Anini , sivuduy cira tu vangcalay , ",
+        "translation": "Anini, sivuduy cira i vangecal a vuduy.",
+        "BLEU1": 0.2857142857142857,
+        "BLEU2": 0.2182178902359924,
+        "BLEU3": 1.0921726457139288e-102,
+        "BLEU4": 6.968148412761692e-155
+    },
+    {
+        "input_sentence": "鉛筆一枝五元，簿子一本九元。",
+        "ground_truth": "Limaan ku sapisurit , siwaan ku sasuritan . ",
+        "translation": "Cacay ku sapisurit a limaay , cacay ku sasuritan a siwa’ay .",
+        "BLEU1": 0.5,
+        "BLEU2": 0.30151134457776363,
+        "BLEU3": 1.3519607278113175e-102,
+        "BLEU4": 8.190757052088229e-155
+    },
+    {
+        "input_sentence": "騎摩托車一定要戴安全帽。",
+        "ground_truth": "Kasihilumitu a maka utuvay . ",
+        "translation": "Maka utuvay aw kasihilumitu.",
+        "BLEU1": 0.19470019576785122,
+        "BLEU2": 5.808561601872144e-155,
+        "BLEU3": 4.3852454550402036e-204,
+        "BLEU4": 1.0032743411283238e-231
+    },
+    {
+        "input_sentence": "夜深了，她還在做家事。",
+        "ground_truth": "Terungtu nu lavi’i , dademak hen cira tunu luma’ . ",
+        "translation": "Terungtu ku lavi’i , hen maka cira tu dademak a luma’ .",
+        "BLEU1": 0.6666666666666666,
+        "BLEU2": 0.34815531191139565,
+        "BLEU3": 1.486599078787057e-102,
+        "BLEU4": 8.80154124704578e-155
+    },
+    {
+        "input_sentence": "我們都搬回家。",
+        "ground_truth": "culu’en niyam a pataluma . ",
+        "translation": "Amin ku niyam a culu’en taluma’.",
+        "BLEU1": 0.5,
+        "BLEU2": 0.316227766016838,
+        "BLEU3": 1.3951588629738666e-102,
+        "BLEU4": 8.38826642100846e-155
+    },
+    {
+        "input_sentence": "野地裡有花。",
+        "ground_truth": "Ira ku varu i uma’umahan . ",
+        "translation": "Ira ku varu i uma'umahan .",
+        "BLEU1": 0.8333333333333334,
+        "BLEU2": 0.7071067811865476,
+        "BLEU3": 0.63287829698514,
+        "BLEU4": 0.537284965911771
+    },
+    {
+        "input_sentence": "不，她忘了戴帽子。",
+        "ground_truth": "Ca’ay , mapawan cira a situper . ",
+        "translation": "Ca’ay , mapawan nira tu situper .",
+        "BLEU1": 0.7142857142857143,
+        "BLEU2": 0.5976143046671969,
+        "BLEU3": 0.4185793008243382,
+        "BLEU4": 6.313993041533344e-78
+    },
+    {
+        "input_sentence": "有一位好心的叔叔經過，",
+        "ground_truth": "Ira ku mita’elivay nu kapahay ku valucu’ a vaki , ",
+        "translation": "Ira ku cacayen a kapah a vaki mita’elivay ,",
+        "BLEU1": 0.596559544542913,
+        "BLEU2": 0.3653166213293175,
+        "BLEU3": 1.477674596873244e-102,
+        "BLEU4": 8.52863367187932e-155
+    },
+    {
+        "input_sentence": "好，十、二十、三十、四十、五十、六十、七十、八十、九十。唉呀！不夠。",
+        "ground_truth": "Hay , pulu’ , tusa a pulu’ , tulu a pulu’ , sepat a pulu’ , lima a pulu’ , enem a pulu’ , pitu a pulu’ , walu a pulu’ , siwa a pulu’ . Aya ! Ca’ay kadengay . ",
+        "translation": "Kapah, muketep tu, tusa a pulu', tulu a pulu', sepat a pulu', lima a pulu', enem a pulu', pitu a pulu', walu a pulu', siwa a pulu'. Aya! Ca’ay tamedaw.",
+        "BLEU1": 0.3927230180489835,
+        "BLEU2": 0.2740113282082538,
+        "BLEU3": 1.1204922027688519e-102,
+        "BLEU4": 6.500336207535856e-155
+    },
+    {
+        "input_sentence": "上學不要遲到！",
+        "ground_truth": "Aka ka’utang a tala cacudadan ! ",
+        "translation": "Na’ay ka’utang tu talacacudadantu !",
+        "BLEU1": 0.3274923012311928,
+        "BLEU2": 7.724018672342283e-155,
+        "BLEU3": 5.383543486467756e-204,
+        "BLEU4": 1.1862177682648818e-231
+    },
+    {
+        "input_sentence": "朋友之間，要友愛及互助幫助！",
+        "ground_truth": "Kasasu’ulah , kapapadang atu cavay ! ",
+        "translation": "Kapapadang aw kapinang nu cavay !",
+        "BLEU1": 0.3333333333333333,
+        "BLEU2": 0.25819888974716115,
+        "BLEU3": 1.2204318888845425e-102,
+        "BLEU4": 7.57965434483665e-155
+    },
+    {
+        "input_sentence": "中午十二時，她忙著做午餐。",
+        "ground_truth": "Savaway tu tusa nu kalahukan , awaay sa ku lawad nira a misakalahuk . ",
+        "translation": "Davak muketeptu tuki, tamedaw cira misakalahuk.",
+        "BLEU1": 0,
+        "BLEU2": 0,
+        "BLEU3": 0,
+        "BLEU4": 0
+    },
+    {
+        "input_sentence": "但是，我們買的故事書卻不相同。",
+        "ground_truth": "Nika , ca’ayay kalecad ku kungku a cudad . ",
+        "translation": "Nika , nicakayan niyam a kungku a cudad ca’ay kalecad .",
+        "BLEU1": 0.6363636363636364,
+        "BLEU2": 0.43693144875265144,
+        "BLEU3": 0.28039660634998675,
+        "BLEU4": 4.661032518640916e-78
+    },
+    {
+        "input_sentence": "郵差也感到喜悅與滿足。",
+        "ground_truth": "U yu-cay satu , mikihatiya a lipahak , a mi’edem tu ulah nu valucu’ . ",
+        "translation": "Ma’ulahtu ku pulul i salipahak atu salipahak.",
+        "BLEU1": 0,
+        "BLEU2": 0,
+        "BLEU3": 0,
+        "BLEU4": 0
+    },
+    {
+        "avg_BLEU1": 0.4623,
+        "avg_BLEU2": 0.2901,
+        "avg_BLEU3": 0.1842,
+        "avg_BLEU4": 0.121
+    }
+]

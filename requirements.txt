@@ -1,4 +1,5 @@
 torch==2.5.1
+torchvision==0.20.1
 openai==1.51.2
 nltk==3.8.1
 transformers==4.46.3

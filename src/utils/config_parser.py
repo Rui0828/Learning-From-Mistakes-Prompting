@@ -13,6 +13,7 @@ def load_config(config_path="config.ini"):
     config = configparser.ConfigParser()
     config.read(config_path, encoding="utf-8")
     return {
+        "language": config["datapath"]["language"],
         "translation_mode": config["ch2amis"]["mode"],
         "Knn_k": config.getint("ch2amis", "Knn_k", fallback=5),
         "LFM_num": config.getint("ch2amis", "LFM_num", fallback=2),
@@ -29,7 +30,8 @@ def load_config(config_path="config.ini"):
         "gpt_model": config['gpt']['model'],
         "gpt_temperature": config.getfloat('gpt', 'temperature', fallback=0.0),
         "gpt_max_output_tokens": config.getint('gpt', 'max_output_tokens', fallback=512),
-        "batch_result_path": config['batch']['result_path']
+        "batch_result_path": config['batch']['result_path'],
+        "batch_test_num": config.getint('batch', 'test_num', fallback=100)
     }
 
 def get_combined_config(config_path="config.ini"):
@@ -45,6 +47,7 @@ def parse_arguments(defaults):
     parser = argparse.ArgumentParser(description="Chinese-to-Amis translations.")
     parser.add_argument("input_sentence", type=str, nargs="?", help="Input sentence to process.")
     parser.add_argument("--batch", action="store_true", help="Run in batch evaluation mode.")
+    parser.add_argument("--language", type=str, default=defaults["language"], help="Language to translate to.")
     parser.add_argument("--translation_mode", type=str, default=defaults["translation_mode"], help="Translation mode (RPC, COT, LFM).")
     parser.add_argument("--Knn_k", type=int, default=defaults["Knn_k"], help="Number of nearest neighbors to retrieve.")
     parser.add_argument("--LFM_num", type=int, default=defaults["LFM_num"], help="Number of examples for LFM.")
@@ -58,11 +61,12 @@ def parse_arguments(defaults):
     parser.add_argument("--rpc_prompt_path", type=str, default=defaults["rpc_prompt_path"], help="Path to the prompt file.")
     parser.add_argument("--cot_prompt_path", type=str, default=defaults["cot_prompt_path"], help="Path to the prompt file.")
     parser.add_argument("--lfm_prompt_path", type=str, default=defaults["lfm_prompt_path"], help="Path to the prompt file.")
-    parser.add_argument("--batch_result_path", type=str, default=defaults["batch_result_path"], help="Path to the batch result file.")
     parser.add_argument("--openai_api_key", type=str, default=defaults["env"]["openai_api_key"], help="OpenAI API key.")
     parser.add_argument("--gpt_model", type=str, default=defaults["gpt_model"], help="OpenAI GPT model to use.")
     parser.add_argument("--gpt_temperature", type=float, default=defaults["gpt_temperature"], help="Temperature for GPT sampling.")
     parser.add_argument("--gpt_max_output_tokens", type=int, default=defaults["gpt_max_output_tokens"], help="Maximum number of tokens to output.")
+    parser.add_argument("--batch_result_path", type=str, default=defaults["batch_result_path"], help="Path to the batch result file.")
+    parser.add_argument("--batch_test_num", type=int, default=defaults["batch_test_num"], help="Number of test cases to run in batch mode.")
     return parser.parse_args()
 
 

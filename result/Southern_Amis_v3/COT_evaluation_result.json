@@ -1,0 +1,98 @@
+[
+    {
+        "input_sentence": "你昨天去哪裡？",
+        "ground_truth": "Natala cuwa kisu i nacila ? ",
+        "translation": "Natala cuwa kisu nacila ?",
+        "BLEU1": 0.8187307530779819,
+        "BLEU2": 0.7090416310250969,
+        "BLEU3": 0.5181569246973543,
+        "BLEU4": 7.070696784820904e-78
+    },
+    {
+        "input_sentence": "願我的孩子長得高大！",
+        "ground_truth": "Nga’ay taratara:kaw tu ku wawa nu maku ! ",
+        "translation": "Nga’ay tata’ak ku wawa nu maku a taratara:kaw !",
+        "BLEU1": 0.7777777777777778,
+        "BLEU2": 0.5400617248673217,
+        "BLEU3": 0.44042320075255215,
+        "BLEU4": 0.34329452398451965
+    },
+    {
+        "input_sentence": "有，爸爸昨天買的。",
+        "ground_truth": "Hay , ira ku nicakayan ni ama i nacila . ",
+        "translation": "Ira, ku nicakayan nu ama i nacila.",
+        "BLEU1": 0.37225089001774603,
+        "BLEU2": 0.2843113135035004,
+        "BLEU3": 1.1242033774493306e-102,
+        "BLEU4": 6.419573613943772e-155
+    },
+    {
+        "input_sentence": "他每天辛苦地在田裡耕作。",
+        "ground_truth": "Ngeru sa cira a mawmah tu remiremi’ad . ",
+        "translation": "Ngeru ku cira a mawmah i liwmah tu remiremi’ad .",
+        "BLEU1": 0.7,
+        "BLEU2": 0.557773351022717,
+        "BLEU3": 0.43050908928275344,
+        "BLEU4": 6.44985558187996e-78
+    },
+    {
+        "input_sentence": "颱風來了，你們今天要上學嗎？",
+        "ground_truth": "Initu ku valiyus , a tala cacudadan haw kamu anini ? ",
+        "translation": "Initu ku valiyus , aw haw kamu tu tala cacudadan anini ?",
+        "BLEU1": 0.8333333333333334,
+        "BLEU2": 0.674199862463242,
+        "BLEU3": 0.453252714669103,
+        "BLEU4": 0.31702331385234306
+    },
+    {
+        "input_sentence": "在部落裡有人結婚，是家族的大事。",
+        "ground_truth": "U tadamaanay a demak nu lalavu nu luma’ ku nikararamud i niyaru’ . ",
+        "translation": "Ira ku maramud i niyaru’ , nika ku tata’ak a remi’ad nu kasalumaluma’.",
+        "BLEU1": 0.38461538461538464,
+        "BLEU2": 0.17902871850985821,
+        "BLEU3": 9.58412890640834e-103,
+        "BLEU4": 6.311514251575017e-155
+    },
+    {
+        "input_sentence": "所以，汗水弄濕了他的衣服。",
+        "ground_truth": "Sisa , raremed sa nu tuhem ku vuduy nira . ",
+        "translation": "Sisa, tuhem ku culu’en ku vuduy nira.",
+        "BLEU1": 0.2791881675133095,
+        "BLEU2": 0.24622082007735305,
+        "BLEU3": 1.022386491470445e-102,
+        "BLEU4": 5.974086398499606e-155
+    },
+    {
+        "input_sentence": "你喜歡什麼運動？",
+        "ground_truth": "U ma’an a nipilaylay ku ka’ulahan nu misu ? ",
+        "translation": "U ma’an ku nipilaylay a ka’ulahan nu misu ?",
+        "BLEU1": 1.0,
+        "BLEU2": 0.7071067811865476,
+        "BLEU3": 0.5261597794341889,
+        "BLEU4": 0.392814650900513
+    },
+    {
+        "input_sentence": "Panay一家人都到山上採收橘子。",
+        "ground_truth": "Talalutuk a miperu’ tu kama ku lalavu nu luma’ na Panay . ",
+        "translation": "Talalutuk amin a tamedaw nu luma’ a Panay tu karuhaay nu kama.",
+        "BLEU1": 0.5,
+        "BLEU2": 0.21320071635561041,
+        "BLEU3": 1.0755340835777305e-102,
+        "BLEU4": 6.887578243315168e-155
+    },
+    {
+        "input_sentence": "隨時提醒我要準時。",
+        "ground_truth": "mirucek tu tuki , u papisamataay i takuwan . ",
+        "translation": "Papisamataay kaku a mirucek.",
+        "BLEU1": 0,
+        "BLEU2": 0,
+        "BLEU3": 0,
+        "BLEU4": 0
+    },
+    {
+        "avg_BLEU1": 0.5666,
+        "avg_BLEU2": 0.4111,
+        "avg_BLEU3": 0.2369,
+        "avg_BLEU4": 0.1053
+    }
+]

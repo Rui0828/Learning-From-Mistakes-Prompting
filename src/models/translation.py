@@ -1,14 +1,9 @@
 import json
 import random
-import warnings
 import src.utils.config_parser as config_parser
 from src.models.callLLM import GPT
 from src.models.knn import KNNRetriever
 from src.utils.dataset_utils import DatasetUtils
-
-
-# 忽略所有 FutureWarning
-warnings.filterwarnings("ignore", category=FutureWarning)
 
 class Ch2AmisTranslator:
     def __init__(self, args, sentences_emb):
@@ -132,7 +127,8 @@ class Ch2AmisTranslator:
             prompt_content = self._get_lfm_prompt(sentence, examples, init_translation, wrong_example)
             response = self.llm.get_response(prompt_content)
             return response
-            
+        else:
+            raise ValueError(f"Translation mode {mode} not supported.")
 
 # Test
 if __name__ == "__main__":
