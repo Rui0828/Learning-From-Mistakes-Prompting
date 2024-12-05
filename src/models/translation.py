@@ -127,12 +127,22 @@ class Ch2AmisTranslator:
             prompt_content = self._get_lfm_prompt(sentence, examples, init_translation, wrong_example)
             response = self.llm.get_response(prompt_content)
             return response
+        elif mode == "ALL":
+            print("Testing RPC...")
+            rpc_response = self.translate(sentence, "RPC")
+            print("[RPC response]:", rpc_response)
+            print("Testing COT...")
+            cot_response = self.translate(sentence, "COT")
+            print("[COT response]:", cot_response)
+            print("Testing LFM...")
+            lfm_response = self.translate(sentence, "LFM")
+            print("[LFM response]:", lfm_response)
+            return {"RPC": rpc_response, "COT": cot_response, "LFM": lfm_response}
         else:
             raise ValueError(f"Translation mode {mode} not supported.")
 
 # Test
 if __name__ == "__main__":
-
     config_defaults = config_parser.get_combined_config()
     args = config_parser.parse_arguments(config_defaults)
     
@@ -150,7 +160,7 @@ if __name__ == "__main__":
     print("Input sentence:", args.input_sentence)
     print("Translation mode:", args.translation_mode)
     result  = translator.translate(args.input_sentence, args.translation_mode)
-    print("Translate:", result)
+    print("Translation:", result)
     print("Test completed")
     
     
