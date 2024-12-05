@@ -35,7 +35,7 @@ Together, these methods bridge gaps in low-resource translation, making machine 
 ## Installation
 
 To get started, clone this repository:
-```bash
+```sh
 git clone https://github.com/Rui0828/Learning-From-Mistakes-Prompting.git
 cd Learning-From-Mistakes-Prompting
 ```
@@ -47,31 +47,31 @@ cd Learning-From-Mistakes-Prompting
 ### Installation Options
 #### Option 1: Using Docker Compose (Recommended)
 Build the Docker Compose environment:
-```bash
-    docker-compose build
+```sh
+docker-compose build
 ```
 
 #### Option 2: Using Docker Directly
 Build the Docker image:  
-```bash
+```sh
 docker build -t lfm-prompting .  
 ```
 
 #### Option 3: Manual Setup
 1. Set up a virtual environment (optional but recommended):
-    ```bash
+    ```sh
     python -m venv env
     source env/bin/activate  # On Windows: .\env\Scripts\activate
     ```
 
 2. Install the required dependencies:
-    ```bash
+    ```sh
     pip install -r requirements.txt
     ```
 
 ### Set up your OpenAI API key:
     - Export the `OPENAI_API_KEY` environment variable before running the code:
-      ```bash
+      ```sh
       export OPENAI_API_KEY="your_api_key"
       ```
     - Alternatively, create a `.env` file in the project root with the following content:
@@ -89,31 +89,31 @@ You can run the program in two modes:
 ### Commands
 #### Using Docker Compose (Recommended)
 - **Single Translation:**
-```bash
+```sh
 docker-compose run lfm-prompting "{input chinese sentence}"
 ```
 - **Batch Translation and Evaluation:**
-```bash
+```sh
 docker-compose run lfm-prompting --batch
 ```
 
 #### Using Docker
 - **Single Translation**
-```bash
+```sh
 docker run --rm -v "$(pwd):/app" -w /app lfm-prompting "{input chinese sentence}"
 ```
 - **Batch Translation and Evaluation:**
-```bash
+```sh
 docker run --rm -v "$(pwd):/app" -w /app lfm-prompting --batch
 ```
 
 #### Using Manual Setup
 - **Single Translation**
-```bash
+```sh
 python -m src.main "{input chinese sentence}"
 ```
 - **Batch Translation and Evaluation:**
-```bash
+```sh
 python -m src.main --batch
 ```
 
