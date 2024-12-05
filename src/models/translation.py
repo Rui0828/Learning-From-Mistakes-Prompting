@@ -1,32 +1,30 @@
-import os
 import json
-import argparse
 import random
-import configparser
 import warnings
-from dotenv import load_dotenv
-from src.models.knn import KNNRetriever
+import src.utils.config_parser as config_parser
 from src.models.callLLM import GPT
+from src.models.knn import KNNRetriever
 from src.utils.dataset_utils import DatasetUtils
+
 
 # 忽略所有 FutureWarning
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 class Ch2AmisTranslator:
-    def __init__(self, knn_k, findlexicon, sentences_path, lexicon_path, lexicon_embedding_path, sentences_emb, emb_model, rpc_prompt_path, cot_prompt_path, lfm_prompt_path, lfm_num, lfm_ict_num, llm_model):
-        self.knn = KNNRetriever(sentences_path, lexicon_path, lexicon_embedding_path, sentences_emb, emb_model)
-        self.knn_k = knn_k
-        self.lfm_num = lfm_num
-        self.lfm_ict_num = lfm_ict_num
-        self.findlexicon = findlexicon
+    def __init__(self, args, sentences_emb):
+        self.knn = KNNRetriever(args, sentences_emb)
+        self.knn_k = args.Knn_k
+        self.lfm_num = args.LFM_num
+        self.lfm_ict_num = args.LFM_ICT_num
+        self.findlexicon = args.findlexicon
         self.sentences_emb = sentences_emb
         
-        self.llm = llm_model
+        self.llm = GPT(args.openai_api_key, args.gpt_model)
         
-        self.rpc_prompt_path = rpc_prompt_path
-        self.cot_prompt_path = cot_prompt_path
-        self.lfm_prompt_path = lfm_prompt_path
-        self.all_ch2amis = {value: key for key, value in json.load(open(sentences_path, "r", encoding="utf-8")).items()}
+        self.rpc_prompt_path = args.rpc_prompt_path
+        self.cot_prompt_path = args.cot_prompt_path
+        self.lfm_prompt_path = args.lfm_prompt_path
+        self.all_ch2amis = DatasetUtils(args.emb_model)._load_json(args.sentences_path, invert=True)
         
         self.LFM_in_context_examples = None
 
@@ -136,88 +134,26 @@ class Ch2AmisTranslator:
             return response
             
 
-def load_config(config_path="config.ini"):
-    """Load configuration from the ini file."""
-    config = configparser.ConfigParser()
-    config.read(config_path, encoding="utf-8")
-    return {
-        "mode": config["ch2amis"]["mode"],
-        "Knn_k": config.getint("ch2amis", "Knn_k", fallback=5),
-        "LFM_num": config.getint("ch2amis", "LFM_num", fallback=2),
-        "LFM_ICT_num": config.getint("ch2amis", "LFM_ICT_num", fallback=2),
-        "findlexicon": config.get("ch2amis", "Find_lexicon", fallback=True),
-        "emb_model":config.get("ch2amis", "embedding_model", fallback="DMetaSoul/sbert-chinese-general-v2"),
-        "sentences_path": config['datapath']['sentences'],
-        "lexicon_path": config['datapath']['lexicon'],
-        "sentence_embedding_path": config['datapath']['sentence_embedding'],
-        "lexicon_embedding_path": config['datapath']['lexicon_embedding'],
-        "rpc_prompt_path": config['datapath']['rpc_prompt'],
-        "cot_prompt_path": config['datapath']['cot_prompt'],
-        "lfm_prompt_path": config['datapath']['lfm_prompt']
-    }
-
-def parse_arguments(defaults):
-    """Parse command-line arguments, overriding config defaults."""
-    parser = argparse.ArgumentParser(description="Chinese-to-Amis translations.")
-    parser.add_argument("input_sentence", type=str, help="Input sentence to process.")
-    parser.add_argument("--translation_mode", type=str, default=defaults["mode"], help="Translation mode (RPC, COT, LFM).")
-    parser.add_argument("--Knn_k", type=int, default=defaults["Knn_k"], help="Number of nearest neighbors to retrieve.")
-    parser.add_argument("--LFM_num", type=int, default=defaults["LFM_num"], help="Number of examples for LFM.")
-    parser.add_argument("--LFM_ICT_num", type=int, default=defaults["LFM_ICT_num"], help="Number of in-context-learning examples for LFM.")
-    parser.add_argument("--findlexicon", type=bool, default=defaults["findlexicon"], help="Whether to find lexicon.")
-    parser.add_argument("--sentences_path", type=str, default=defaults["sentences_path"], help="Path to the sentences file.")
-    parser.add_argument("--lexicon_path", type=str, default=defaults["lexicon_path"], help="Path to the lexicon file.")
-    parser.add_argument("--sentence_embedding_path", type=str, default=defaults["sentence_embedding_path"], help="Path to the sentence embedding file.")
-    parser.add_argument("--lexicon_embedding_path", type=str, default=defaults["lexicon_embedding_path"], help="Path to the lexicon embedding file.")
-    parser.add_argument("--emb_model", type=str, default=defaults["emb_model"], help="Type of embedding model to use.")
-    parser.add_argument("--rpc_prompt_path", type=str, default=defaults["rpc_prompt_path"], help="Path to the prompt file.")
-    parser.add_argument("--cot_prompt_path", type=str, default=defaults["cot_prompt_path"], help="Path to the prompt file.")
-    parser.add_argument("--lfm_prompt_path", type=str, default=defaults["lfm_prompt_path"], help="Path to the prompt file.")
-    return parser.parse_args()
-
-
 # Test
 if __name__ == "__main__":
 
-    # Load defaults from config
-    config_defaults = load_config()
-    
-    # Parse arguments with overrides
-    args = parse_arguments(config_defaults)
-    
-    # Extract parameters
-    sentence = args.input_sentence
-    translation_mode = args.translation_mode
-    knn_k = args.Knn_k
-    lfm_num = args.LFM_num 
-    lfm_ict_num = args.LFM_ICT_num
-    findlexicon = args.findlexicon
-    sentences_path = args.sentences_path
-    lexicon_path = args.lexicon_path
-    sentence_embedding_path = args.sentence_embedding_path
-    lexicon_embedding_path = args.lexicon_embedding_path
-    emb_model = args.emb_model
-    rpc_prompt_path = args.rpc_prompt_path
-    cot_prompt_path = args.cot_prompt_path
-    lfm_prompt_path = args.lfm_prompt_path
+    config_defaults = config_parser.get_combined_config()
+    args = config_parser.parse_arguments(config_defaults)
     
     # Initialize the translator
-    data_utils = DatasetUtils(emb_model)
-    all_ch2amis = data_utils._load_json(sentences_path, invert=True)
-    sentence_embeddings = data_utils._load_embeddings(sentence_embedding_path, all_ch2amis)
+    data_utils = DatasetUtils(args.emb_model)
+    all_ch2amis = data_utils._load_json(args.sentences_path, invert=True)
+    sentence_embeddings = data_utils._load_embeddings(args.sentence_embedding_path, all_ch2amis)
     
-    load_dotenv()
-    api_key = os.getenv("OPENAI_API_KEY")
-    llm_model = GPT(api_key, "gpt-4o")
+    translator = Ch2AmisTranslator(args, sentence_embeddings)
     
-    translator = Ch2AmisTranslator(knn_k, findlexicon, sentences_path, lexicon_path, lexicon_embedding_path, sentence_embeddings, emb_model, rpc_prompt_path, cot_prompt_path, lfm_prompt_path, lfm_num, lfm_ict_num, llm_model)
-    
-    
+    if not args.input_sentence:
+        raise ValueError("Please provide an input sentence.")
     
     print("Test the translation function")
-    print("Input sentence:", sentence)
-    print("Translation mode:", translation_mode)
-    result  = translator.translate(sentence, translation_mode)
+    print("Input sentence:", args.input_sentence)
+    print("Translation mode:", args.translation_mode)
+    result  = translator.translate(args.input_sentence, args.translation_mode)
     print("Translate:", result)
     print("Test completed")
     

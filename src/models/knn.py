@@ -2,20 +2,20 @@ import re
 import numpy as np
 import jieba
 import string
-import configparser
+import src.utils.config_parser as config_parser
 from src.models.embedding import EmbeddingModel
 from src.utils.dataset_utils import DatasetUtils
 
 
 class KNNRetriever:
-    def __init__(self, sentences_path, lexicon_path, lexicon_embedding_path, sentences_emb, model_name):
-        self.embedding_model = EmbeddingModel(model_name)
-        self.sentences_path = sentences_path
-        self.lexicon_path = lexicon_path
-        self.lexicon_embedding_path = lexicon_embedding_path
+    def __init__(self, args, sentences_emb):
+        self.embedding_model = EmbeddingModel(args.emb_model)
+        self.sentences_path = args.sentences_path
+        self.lexicon_path = args.lexicon_path
+        self.lexicon_embedding_path = args.lexicon_embedding_path
         self.sentences_emb = sentences_emb
         
-        self.data_utils = DatasetUtils(model_name)
+        self.data_utils = DatasetUtils(args.emb_model)
         self.all_ch2amis = self.data_utils._load_json(self.sentences_path, invert=True)
         self.lexicon, self.lexicon_list = self.data_utils._load_lexicon(self.lexicon_path)
         self.faiss_index, self.lexicon_mapping = self.data_utils._load_lexicon_embeddings(self.lexicon_embedding_path, self.lexicon_list)
@@ -127,19 +127,13 @@ if __name__ == "__main__":
     print("Test the knn function") 
     sentence = "中興大學是一所位於台灣的優質學校"
     
-    # Load the configuration
-    config = configparser.ConfigParser()
-    config.read("config.ini", encoding="utf-8")
-    sentences_path = config['datapath']['sentences']
-    lexicon_path = config['datapath']['lexicon']
-    sentence_embedding_path = config['datapath']['sentence_embedding']
-    lexicon_embedding_path = config['datapath']['lexicon_embedding']
-    model_name = config['ch2amis']['embedding_model']
+    config_defaults = config_parser.get_combined_config()
+    args = config_parser.parse_arguments(config_defaults)
     
-    data_utils = DatasetUtils(model_name)
-    all_ch2amis = data_utils._load_json(sentences_path, invert=True)
-    sentence_embeddings = data_utils._load_embeddings(sentence_embedding_path, all_ch2amis)
-    knn = KNNRetriever(sentences_path, lexicon_path, lexicon_embedding_path, sentence_embeddings, model_name)
+    data_utils = DatasetUtils(args.emb_model)
+    all_ch2amis = data_utils._load_json(args.sentences_path, invert=True)
+    sentence_embeddings = data_utils._load_embeddings(args.sentence_embedding_path, all_ch2amis)
+    knn = KNNRetriever(args, sentence_embeddings)
     
     print(knn.find_knn_examples(sentence, 10))
     print("Test Done.")
