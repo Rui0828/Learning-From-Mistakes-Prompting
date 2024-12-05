@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from typing import Union
 
 class GPT():
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str, model):
         
         # Check if API key is loaded
         if not api_key:
@@ -12,11 +12,16 @@ class GPT():
 
         # Initialize the OpenAI API client
         openai.api_key = api_key
+        self.model = model
+        print(f"Initalized default OpenAI GPT model: {model}")
 
     # Define the GPT function
-    @staticmethod
-    def get_response(prompt: Union[str, list[dict[str, str]]], model: str = "gpt-4o", max_output_tokens: int = 512, temperature: float = 0):
-        print(f"Requesting response from OpenAI GPT model: {model}")
+    def get_response(self, prompt: Union[str, list[dict[str, str]]], model: str = None, max_output_tokens: int = 512, temperature: float = 0):
+        if not model or model == self.model:
+            model = self.model
+        else:
+            print(f"Requesting response from OpenAI GPT model: {model}")
+        
         response = openai.chat.completions.create(
             model = model,
             messages = prompt if type(prompt) == list else [{"role": "user", "content": prompt}],

@@ -8,12 +8,12 @@ from src.utils.dataset_utils import DatasetUtils
 
 
 class KNNRetriever:
-    def __init__(self, sentences_path, lexicon_path, lexicon_embedding_path, model_name):
+    def __init__(self, sentences_path, lexicon_path, lexicon_embedding_path, sentences_emb, model_name):
         self.embedding_model = EmbeddingModel(model_name)
         self.sentences_path = sentences_path
         self.lexicon_path = lexicon_path
         self.lexicon_embedding_path = lexicon_embedding_path
-        
+        self.sentences_emb = sentences_emb
         
         self.data_utils = DatasetUtils(model_name)
         self.all_ch2amis = self.data_utils._load_json(self.sentences_path, invert=True)
@@ -77,12 +77,12 @@ class KNNRetriever:
         return ans
 
     # find_knn_examples_topN_sentence
-    def find_knn_examples_topN_sentence(self, sentence, k, sentence_embeddings):
+    def find_knn_examples_topN_sentence(self, sentence, k):
         
         if k == 0:
             return []
         
-        cp_datastore_embeddings = sentence_embeddings.copy()
+        cp_datastore_embeddings = self.sentences_emb.copy()
         if sentence in cp_datastore_embeddings:
             del cp_datastore_embeddings[sentence]
 
@@ -109,10 +109,10 @@ class KNNRetriever:
 
     
     # knn主程式
-    def find_knn_examples(self, sentence, k, sentence_embeddings, findlexicon=True):
+    def find_knn_examples(self, sentence, k, findlexicon=True):
         examples = ''.join(
             f"[zh]: {zh_example}\n[amis]: {amis_example}\n\n"
-            for zh_example, amis_example in self.find_knn_examples_topN_sentence(sentence, k, sentence_embeddings)
+            for zh_example, amis_example in self.find_knn_examples_topN_sentence(sentence, k)
         )
 
         if findlexicon:
@@ -139,7 +139,7 @@ if __name__ == "__main__":
     data_utils = DatasetUtils(model_name)
     all_ch2amis = data_utils._load_json(sentences_path, invert=True)
     sentence_embeddings = data_utils._load_embeddings(sentence_embedding_path, all_ch2amis)
-    knn = KNNRetriever(sentences_path, lexicon_path, lexicon_embedding_path, model_name)
+    knn = KNNRetriever(sentences_path, lexicon_path, lexicon_embedding_path, sentence_embeddings, model_name)
     
-    print(knn.find_knn_examples(sentence, 10, sentence_embeddings))
+    print(knn.find_knn_examples(sentence, 10))
     print("Test Done.")
