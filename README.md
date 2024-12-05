@@ -69,12 +69,16 @@ docker build -t lfm-prompting .
     pip install -r requirements.txt
     ```
 
-### Set up your OpenAI API key:
+### Set up your OpenAI API key:  
+
  - Export the `OPENAI_API_KEY` environment variable before running the code:  
+
    ```sh
    export OPENAI_API_KEY="your_api_key"
    ```
+
  - Alternatively, create a `.env` file in the project root with the following content:  
+
    ```
    OPENAI_API_KEY=your_api_key
    ```
