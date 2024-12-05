@@ -1,11 +1,11 @@
 # Learning-From-Mistakes Prompting for Indigenous Language Translation
-This repository contains the codebase for the method described in our paper: **"Learning-From-Mistakes Prompting for Indigenous Language Translation,"** presented at **LoResMT 2024**.
+This repository contains the codebase for the method described in our paper: **"Learning-From-Mistakes Prompting for Indigenous Language Translation,"** presented at **LoResMT 2024**.  
 
-Our method, *Learning-From-Mistakes Prompting (LFM)*, introduces a feedback-driven framework to improve low-resource machine translation. By iteratively refining translations through error analysis and targeted adjustments, this approach significantly enhances the performance on indigenous language datasets.
+Our method, *Learning-From-Mistakes Prompting (LFM)*, is a feedback-driven framework that enhances low-resource machine translation by iteratively refining translations based on error analysis and targeted adjustments. This significantly improves translation performance for indigenous language datasets.  
 
-For a detailed explanation of the methodology and experimental results, please refer to the full paper:  
-- LoResMT@ACL 2024: [https://aclanthology.org/2024.loresmt-1.15/](https://aclanthology.org/2024.loresmt-1.15/)  
-- arXiv: [https://arxiv.org/abs/2407.13343](https://arxiv.org/abs/2407.13343)
+For more details, please refer to the paper:  
+- LoResMT@ACL 2024: [View on ACL Anthology](https://aclanthology.org/2024.loresmt-1.15/)  
+- arXiv: [Read on arXiv](https://arxiv.org/abs/2407.13343)
 
 ---
 
@@ -21,39 +21,47 @@ For a detailed explanation of the methodology and experimental results, please r
 
 ## Introduction
 
-Indigenous languages often face significant challenges in machine translation due to limited resources, including sparse datasets, complex linguistic structures, and diverse dialects. This repository provides the source code for reproducing the results in our paper, which proposes the following methods to address these challenges:
+Machine translation for indigenous languages faces unique challenges such as limited datasets, complex linguistic structures, and diverse dialects. This repository provides the code to reproduce the results of our paper, proposing three key methods:
 
-1. **KNN-Prompting with Retrieved Prompting Context (RPC):** Utilizes similar examples from a dataset to provide better context for translations.  
-2. **Chain-of-Thought (CoT) Prompting:** Guides language models with step-by-step reasoning to improve translation accuracy.  
-3. **Learning-From-Mistakes (LFM) Prompting:** Introduces feedback loops that iteratively refine translations based on identified errors.
+1. **KNN-Prompting with Retrieved Prompting Context (RPC):** Enhances context by leveraging similar examples.
+2. **Chain-of-Thought (CoT) Prompting:** Improves translation accuracy through step-by-step reasoning.  
+3. **Learning-From-Mistakes (LFM) Prompting:** Iteratively refines translations using feedback-driven error corrections.  
 
-Together, these methods work to enhance the translation of low-resource indigenous languages, making machine translation more accessible and accurate for these languages.
+Together, these methods bridge gaps in low-resource translation, making machine translation more accessible and effective for indigenous languages.
+
 
 ---
 
 ## Installation
 
-### Option 1: Using Docker (Recommended)
-1. Build the Docker image:  
-    ```bash
-    docker build -t lfm-prompting .  
-    ```
+To get started, clone this repository:
+```bash
+git clone https://github.com/Rui0828/Learning-From-Mistakes-Prompting.git
+cd Learning-From-Mistakes-Prompting
+```
 
-2. Run the application:  
-    ```bash
-    docker run --rm -it lfm-prompting
-    ```
+### Requirements
+- **Python:** >= 3.8
+- **Docker:** >= 20.10 (for Docker-based setups)
 
-3. (Optional) Use Docker Compose for more complex setups:
-    ```bash
-    docker-compose up
-    ```
+### Installation Options
+#### Option 1: Using Docker Compose (Recommended)
+Build the Docker Compose environment:
+```bash
+    docker-compose build
+```
 
-### Option 2: Manual Setup
-1. Clone this repository:
+#### Option 2: Using Docker Directly
+Build the Docker image:  
+```bash
+docker build -t lfm-prompting .  
+```
+
+#### Option 3: Manual Setup
+1. Set up a virtual environment (optional but recommended):
     ```bash
-    git clone https://github.com/Rui0828/Learning-From-Mistakes-Prompting.git
-    cd Learning-From-Mistakes-Prompting
+    python -m venv env
+    source env/bin/activate  # On Windows: .\env\Scripts\activate
     ```
 
 2. Install the required dependencies:
@@ -61,29 +69,58 @@ Together, these methods work to enhance the translation of low-resource indigeno
     pip install -r requirements.txt
     ```
 
-3. (Optional) Set up a virtual environment:
-    ```bash
-    python -m venv env
-    source env/bin/activate  # On Windows: .\env\Scripts\activate
-    ```
+### Set up your OpenAI API key:
+    - Export the `OPENAI_API_KEY` environment variable before running the code:
+      ```bash
+      export OPENAI_API_KEY="your_api_key"
+      ```
+    - Alternatively, create a `.env` file in the project root with the following content:
+      ```
+      OPENAI_API_KEY=your_api_key
+      ```
 
 ## Usage
+You can run the program in two modes:
+1. **Single Sentence Translation:**
+   Translate a single Chinese sentence to the target language.
+2. **Batch Translation and Evaluation:**
+   Use the `--batch` option to automatically split data into a test set (default: 100 sentences) and a datastore, perform batch translations, and evaluate results using BLEU scores. Results are saved in the `./results` directory.
 
-### Docker Command
-To process a sample input using Docker:
+### Commands
+#### Using Docker Compose (Recommended)
+- **Single Translation:**
 ```bash
-docker run --rm -it lfm-prompting python src/main.py --input examples/sample_input.txt --output results/output.txt
+docker-compose run lfm-prompting "{input chinese sentence}"
+```
+- **Batch Translation and Evaluation:**
+```bash
+docker-compose run lfm-prompting --batch
 ```
 
-### Manual Command
-Run the main script:
+#### Using Docker
+- **Single Translation**
 ```bash
-python src/main.py --input examples/sample_input.txt --output results/output.txt
+docker run --rm -v "$(pwd):/app" -w /app lfm-prompting "{input chinese sentence}"
 ```
+- **Batch Translation and Evaluation:**
+```bash
+docker run --rm -v "$(pwd):/app" -w /app lfm-prompting --batch
+```
+
+#### Using Manual Setup
+- **Single Translation**
+```bash
+python -m src.main "{input chinese sentence}"
+```
+- **Batch Translation and Evaluation:**
+```bash
+python -m src.main --batch
+```
+
 
 ## Results
 
-The following table presents the translation results for **Southern Amis** across different methods. We report the performance metrics **BLEU1**, **BLEU2**, **BLEU3**, and **chrF++** for each method. The results demonstrate the effectiveness of different prompting techniques, with **LFM Prompting** achieving the best performance.
+Below are the results for **Southern Amis** translation using different methods. Metrics include **BLEU1**, **BLEU2**, **BLEU3**, and **chrF++**. Our **LFM Prompting** outperforms all other approaches.  
 
 | **Methods**                                    | **BLEU1 (STD)** | **BLEU2 (STD)** | **BLEU3 (STD)** | **chrF++ (STD)** |
 |------------------------------------------------|-----------------|-----------------|-----------------|------------------|
@@ -96,8 +133,13 @@ The following table presents the translation results for **Southern Amis** acros
 | **CoT Prompting**                              | 44.4 ± 1.5      | 14.3 ± 0.6      | 5.9 ± 1.1       | 43.5 ± 0.3       |
 | **LFM Prompting**                              | 44.4 ± 2.7      | 17.5 ± 1.8      | 8.2 ± 1.7       | 44.9 ± 1.9       |
 
-These results indicate that **LFM Prompting** provides a substantial improvement over traditional methods such as **Zeroshot** and **20-shots**, and also outperforms **Knn-Prompting** and **CoT Prompting** in terms of BLEU and chrF++ scores.
+> Note: **LFM Prompting** achieves the best **BLEU3** and **chrF++** scores, demonstrating its effectiveness in refining translations.  
 
+## Troubleshooting
+If you encounter issues, here are some common solutions:  
+- Missing API Key: Ensure your OpenAI API key is correctly set as an environment variable or in a `.env` file.
+- Dependency Errors: Verify Python dependencies using `pip install -r requirements.txt`. Consider using a virtual environment.
+- Docker Errors: Ensure Docker is installed and running. Check your Docker version compatibility.
 
 ## Citation
 If you use this code in your research, please cite our paper:
@@ -118,11 +160,4 @@ This work was conducted during my master's studies at the [**Natural Language Pr
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-The Apache License 2.0 allows you to freely use, modify, and distribute this software, with the following conditions:
-- You must include a copy of the license in any distribution.
-- You cannot use the name of the project or contributors without permission.
-- Any modifications to the code must be documented.
-
-For more details, please refer to the full license text available in the [LICENSE](LICENSE) file.
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
