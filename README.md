@@ -182,8 +182,5 @@ This work was conducted during my undergraduate studies at the [**Natural Langua
 
 This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.  
 Note: This repository uses OpenAI API for certain functionalities. Users are responsible for ensuring compliance with OpenAI's [usage policies](https://openai.com/policies/usage-policies/).  
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request if you have suggestions for improving the codebase or adding new features.  
+ 
 
