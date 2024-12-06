@@ -156,9 +156,9 @@ Below are the results for **Southern Amis** translation using different methods.
 
 ## Troubleshooting
 If you encounter issues, here are some common solutions:  
-- Missing API Key: Ensure your OpenAI API key is correctly set as an environment variable or in a `.env` file.  
-- Dependency Errors: Verify Python dependencies using `pip install -r requirements.txt`. Consider using a virtual environment.  
-- Docker Errors: Ensure Docker is installed and running. Check your Docker version compatibility.  
+- **Missing API Key:** Ensure your OpenAI API key is correctly set as an environment variable or in a `.env` file.  
+- **Dependency Errors:** Verify Python dependencies using `pip install -r requirements.txt`. Consider using a virtual environment.  
+- **Docker Errors:** Ensure Docker is installed and running. Check your Docker version compatibility.  
 
 ## Citation
 If you use this code in your research, please cite our paper:  
