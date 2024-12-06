@@ -7,6 +7,8 @@ For more details, please refer to the paper:
 - LoResMT@ACL 2024: [View on ACL Anthology](https://aclanthology.org/2024.loresmt-1.15/)  
 - arXiv: [Read on arXiv](https://arxiv.org/abs/2407.13343)
 
+By making this code publicly available, we hope to facilitate further research and encourage collaboration in the field of low-resource language machine translation.
+
 ---
 
 ## Table of Contents
@@ -25,7 +27,7 @@ For more details, please refer to the paper:
 Machine translation for indigenous languages faces unique challenges such as limited datasets, complex linguistic structures, and diverse dialects. This repository provides the code to reproduce the results of our paper, proposing three key methods:  
 
 1. **KNN-Prompting with Retrieved Prompting Context (RPC):** Enhances context by leveraging similar examples.  
-2. **Chain-of-Thought (CoT) Prompting:** Improves translation accuracy through step-by-step reasoning.  
+2. **Chain-of-Thought (CoT) Prompting:** Guides the model through a structured reasoning process before producing translations, enabling more accurate linguistic outputs.  
 3. **Learning-From-Mistakes (LFM) Prompting:** Iteratively refines translations using feedback-driven error corrections.  
 
 Together, these methods bridge gaps in low-resource translation, making machine translation more accessible and effective for indigenous languages.  
@@ -39,9 +41,9 @@ Our framework is designed to be adaptable to any **low-resource language** where
 While our experiments focus on datasets from indigenous languages sourced from [Klokah Platform](https://web.klokah.tw), including **Southern Amis**, **Coastal Amis**, and others, the method itself is **language-agnostic**. This ensures that it is broadly applicable to any low-resource language with minimal parallel resources.  
 
 ### Key Highlights:
-- **Parallel Corpus Requirement:** A minimal set of sentence- or word-level alignments between a high-resource and a low-resource language.  
-- **Broad Applicability:** Suitable for diverse low-resource languages with sparse datasets and linguistic challenges.  
-- **Indigenous Language Focus:** While tested on indigenous languages, the framework is not limited to these; it is universally applicable to low-resource translation tasks.  
+- **Requirements:** A minimal parallel corpus between a high-resource and a low-resource language.  
+- **Adaptability:** Works with diverse low-resource datasets, from sentence pairs to bilingual dictionaries.  
+- **Focus:** Tested on indigenous languages (e.g., Southern Amis), but broadly applicable to any low-resource translation.  
 
 This flexibility enables the application of our framework beyond the tested datasets, contributing to the development of machine translation for underrepresented languages globally.  
 
@@ -152,7 +154,7 @@ Below are the results for **Southern Amis** translation using different methods.
 | **CoT Prompting**                              | 44.4 ± 1.5      | 14.3 ± 0.6      | 5.9 ± 1.1       | 43.5 ± 0.3       |
 | **LFM Prompting**                              | 44.4 ± 2.7      | 17.5 ± 1.8      | 8.2 ± 1.7       | 44.9 ± 1.9       |
 
-> Note: **LFM Prompting** achieves the best **BLEU** and **chrF++** scores, demonstrating its effectiveness in refining translations.  
+> The results show that **LFM Prompting** achieves the highest BLEU and chrF++ scores, significantly outperforming traditional approaches, especially in low-resource settings.  
 
 ## Troubleshooting
 If you encounter issues, here are some common solutions:  
@@ -179,3 +181,9 @@ This work was conducted during my undergraduate studies at the [**Natural Langua
 ## License
 
 This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.  
+Note: This repository uses OpenAI API for certain functionalities. Users are responsible for ensuring compliance with OpenAI's [usage policies](https://openai.com/policies/usage-policies/).  
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request if you have suggestions for improving the codebase or adding new features.  
+
