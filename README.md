@@ -40,10 +40,10 @@ Our framework is designed to be adaptable to any **low-resource language** where
 
 While our experiments focus on datasets from indigenous languages sourced from [Klokah Platform](https://web.klokah.tw), including **Southern Amis**, **Coastal Amis**, and others, the method itself is **language-agnostic**. This ensures that it is broadly applicable to any low-resource language with minimal parallel resources.  
 
-### Key Highlights:
-- **Requirements:** A minimal parallel corpus between a high-resource and a low-resource language.  
-- **Adaptability:** Works with diverse low-resource datasets, from sentence pairs to bilingual dictionaries.  
-- **Focus:** Tested on indigenous languages (e.g., Southern Amis), but broadly applicable to any low-resource translation.  
+### Key Highlights:  
+- **Parallel Corpus Requirement:** A minimal set of sentence- or word-level alignments between a high-resource and a low-resource language.  
+- **Broad Applicability:** Suitable for diverse low-resource languages with sparse datasets and linguistic challenges.  
+- **Indigenous Language Focus:** While tested on indigenous languages, the framework is not limited to these; it is universally applicable to low-resource translation tasks.  
 
 This flexibility enables the application of our framework beyond the tested datasets, contributing to the development of machine translation for underrepresented languages globally.  
 
